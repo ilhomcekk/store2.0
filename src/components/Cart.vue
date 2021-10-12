@@ -8,12 +8,15 @@
         </div>
         <div class="cart__info">
             <div class="flex justify-between mt-3">
-                <a class="cart__cat" href="#">Костюмы</a>
-                <a class="cart__brand" href="#">Zara</a>
+                <a class="cart__cat" href="#">{{ cart.category }}</a>
+                <a class="cart__brand" href="#">{{ cart.brand }}</a>
             </div>
             <div class="cart__title">
-                <a href="#">Элегантный Костюм с брюками ZARA стиль</a>
-                <p>1400  ₽</p>
+                <a href="#">{{ cart.name }}</a>
+                <div class="cart__price">
+                    <h5>{{ cart.price }}</h5>
+                    <p>{{ cart.oldprice }}</p>
+                </div>
             </div>
             <div class="cart__add">
                 <button>
@@ -26,6 +29,7 @@
 </template>
 <script>
 export default {
+  props: ['cart']
 
 }
 </script>
@@ -93,11 +97,23 @@ export default {
         line-height: 18px;
         color: #000000;
     }
-    .cart__title p {
+    .cart__price {
+        display: flex;
+        flex-direction: row;
+    }
+    .cart__price h5 {
         font-weight: 500;
         font-size: 17px;
         line-height: 21px;
         color: #005964;
         margin-top: 10px;
+    }
+    .cart__price p {
+        margin-left: 30px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: 14px;
+        text-decoration: line-through;
     }
 </style>
