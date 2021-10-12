@@ -26,7 +26,7 @@
 </template>
 <script>
 export default {
-    
+
 }
 </script>
 <style scoped>
@@ -37,6 +37,7 @@ export default {
         width: 100%;
         height: 227px;
         object-fit: cover;
+        border-radius: 10px 10px 0 0;
     }
     .cart__image button {
         position: absolute;

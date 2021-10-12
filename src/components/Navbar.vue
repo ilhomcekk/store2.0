@@ -1,6 +1,6 @@
 <template>
     <div class="navbar__back">
-        <div class="container mx-auto">
+        <div class="container mx-auto px-5">
             <div class="flex justify-between pt-2">
                 <div class="flex navbar__text ">
                     <a href="#" class="flex">
@@ -27,7 +27,6 @@
                             <span>Категории</span>
                             <img class="ml-3" src="../assets/svg/dropdown.svg" alt="">
                         </button>
-                        
                     </div>
                 </div>
                 <div class="col-span-3">
