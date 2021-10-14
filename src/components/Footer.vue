@@ -1,6 +1,6 @@
 <template>
     <div class="footer__back">
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-8">
             <div class="footer__box">
                 <div class="footer__logo">
                     <a href="#">LOGO</a>

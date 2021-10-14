@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto mt-16 px-5">
+    <div class="container mx-auto mt-16 px-12">
         <div class="brand__name">
             <h2>Ваши магазины</h2>
         </div>
