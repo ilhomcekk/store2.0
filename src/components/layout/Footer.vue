@@ -73,7 +73,7 @@
                        <h5>Мы в соцсетях</h5>
                     </div>
                     <a href="#">
-                        <img src="../assets/image/a.png" alt="">
+                        <img src="../../assets/image/a.png" alt="">
                     </a>
                 </div>
             </div>

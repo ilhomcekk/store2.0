@@ -1,7 +1,7 @@
 <template>
     <div class="cart__box shadow-xl">
         <div class="cart__image">
-            <img src="../assets/image/11175-4 1.png" alt="">
+            <img :src="cart.img" alt="">
             <button>
                 <i class="far fa-heart"></i>
             </button>
@@ -30,7 +30,6 @@
 <script>
 export default {
   props: ['cart']
-
 }
 </script>
 <style scoped>

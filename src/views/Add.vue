@@ -11,11 +11,7 @@
                 <h1>Базовая рубашка</h1>
                 <div class="product-action">
                     <div class="stars">
-                        <img src="../assets/svg/Star 1.svg" alt="star">
-                        <img src="../assets/svg/Star 1.svg" alt="star">
-                        <img src="../assets/svg/Star 1.svg" alt="star">
-                        <img src="../assets/svg/Star 1.svg" alt="star">
-                        <img src="../assets/svg/Star 1.svg" alt="star">
+                        <star-rating :rating="5" />
                     </div>
                     <div class="comment"><span>545</span>отзывов</div>
                 </div>
@@ -133,52 +129,70 @@
                             <div class="order">4.5</div>
                             <p class="pb-5">На основании 105 отзыва</p>
                             <div class="stars">
-                                <img src="../assets/svg/Star 1.svg" alt="star">
-                                <img src="../assets/svg/Star 1.svg" alt="star">
-                                <img src="../assets/svg/Star 1.svg" alt="star">
-                                <img src="../assets/svg/Star 1.svg" alt="star">
-                                <img src="../assets/svg/Star 1.svg" alt="star">
+                                <star-rating :rating="4" />
                             </div>
                         </div>
                         <div class="place">
                             <div class="lines">
-                                <div class="number">5</div>
-                                <div class="line"></div>
+                                <div class="flex flex-row w-full">
+                                    <div class="w-4">
+                                        <h6>5</h6>
+                                    </div>
+                                    <progress-line :val="83" class="progress__align" />
+                                </div>
                                 <div class="percent">83%</div>
                             </div>
                             <div class="lines">
-                                <div class="number">4</div>
-                                <div class="line"></div>
+                                <div class="flex flex-row w-full">
+                                    <div class="w-4">
+                                        <h6>4</h6>
+                                    </div>
+                                    <progress-line :val="15" class="progress__align" />
+                                </div>
                                 <div class="percent">15%</div>
                             </div>
                             <div class="lines">
-                                <div class="number">3</div>
-                                <div class="line"></div>
+                                <div class="flex flex-row w-full">
+                                    <div class="w-4">
+                                        <h6>3</h6>
+                                    </div>
+                                    <progress-line :val="3" class="progress__align" />
+                                </div>
                                 <div class="percent">3%</div>
                             </div>
                             <div class="lines">
-                                <div class="number">2</div>
-                                <div class="line"></div>
+                                <div class="flex flex-row w-full">
+                                    <div class="w-4">
+                                        <h6>2</h6>
+                                    </div>
+                                    <progress-line :val="8" class="progress__align" />
+                                </div>
                                 <div class="percent">8%</div>
                             </div>
                             <div class="lines">
-                                <div class="number">1</div>
-                                <div class="line"></div>
+                                <div class="flex flex-row w-full">
+                                    <div class="w-4">
+                                        <h6>1</h6>
+                                    </div>
+                                    <progress-line :val="7" class="progress__align" />
+                                </div>
                                 <div class="percent">7%</div>
                             </div>
                         </div>
                     </div>
                     <div class="q__box">
                         <div class="box">
-                            <div class="protsent">65.5%</div>
+                            <div class="protsent">
+                                <Progress :value="65.5" />
+                            </div>
                             <p>Barcha sotuvlar</p>
                         </div>
                         <div class="box">
-                            <div class="protsent">55.8%</div>
+                            <Progress :value="48.8" />
                             <p>Barcha sotuvlar</p>
                         </div>
                         <div class="box">
-                            <div class="protsent">50.5%</div>
+                            <Progress :value="50.5" />
                             <p>Barcha sotuvlar</p>
                         </div>
                     </div>
@@ -195,11 +209,7 @@
                             <div class="user">
                                 <div class="user__name">Турсунов Асрор</div>
                                 <div class="stars">
-                                    <img src="../assets/svg/Star 1.svg" alt="star">
-                                    <img src="../assets/svg/Star 1.svg" alt="star">
-                                    <img src="../assets/svg/Star 1.svg" alt="star">
-                                    <img src="../assets/svg/Star 1.svg" alt="star">
-                                    <img src="../assets/svg/Star 1.svg" alt="star">
+                                    <star-rating :rating="3" />
                                 </div>
                             </div>
                             <p>Качество ткани хорошее, но если вы предпочитаете оверсайз, выбирайте размер меньше вашего, например, слишком свободные рукава.</p>
@@ -229,10 +239,13 @@
 </template>
 
 <script>
-import Navbar from '../components/Navbar.vue'
+import Navbar from '../components/layout/Navbar.vue'
 import Cart from '../components/Cart.vue'
-import Footer from '../components/Footer.vue'
+import Footer from '../components/layout/Footer.vue'
 import Counter from '../components/Counter.vue'
+import Progress from '../components/progress/Progress.vue'
+import StarRating from '../components/StarRating.vue'
+import ProgressLine from '../components/progress/ProgressLine.vue'
 
 export default {
   name: 'Home',
@@ -251,7 +264,10 @@ export default {
     Navbar,
     Cart,
     Footer,
-    Counter
+    Counter,
+    StarRating,
+    Progress,
+    ProgressLine
   }
 }
 
@@ -260,6 +276,12 @@ export default {
     .back {
         background-color: #E5E5E5;
     }
-    
-
+    .stars span {
+        margin-right: 5px !important;
+    }
+    .progress__align {
+        align-self: center;
+        width: 75%;
+        margin-left: 15px;
+    }
 </style>

@@ -42,12 +42,12 @@
 </template>
 
 <script>
-import Navbar from '../components/Navbar.vue'
+import Navbar from '../components/layout/Navbar.vue'
+import Footer from '../components/layout/Footer.vue'
 import Slide from '../components/Slide.vue'
 import Magazin from '../components/Magazin.vue'
 import Cart from '../components/Cart.vue'
 import Title from '../components/Title.vue'
-import Footer from '../components/Footer.vue'
 
 export default {
   name: 'Home',

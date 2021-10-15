@@ -7,6 +7,15 @@ import Delivery from '../views/Delivery.vue'
 import Mnews from '../views/Mnews.vue'
 import News from '../views/News.vue'
 import Seller from '../views/Seller.vue'
+import Contacts from '../views/Contacts.vue'
+import Cabinet from '../views/Cabinet.vue'
+import Filter from '../views/Filter.vue'
+import Info from '../views/Info.vue'
+import Message from '../views/Message.vue'
+import Payments from '../views/Payments.vue'
+import Questions from '../views/Questions.vue'
+import Requisites from '../views/Requisites.vue'
+import ReturnProduct from '../views/ReturnProduct.vue'
 
 Vue.use(VueRouter)
 
@@ -45,6 +54,51 @@ const routes = [
     path: '/seller',
     name: 'Seller',
     component: Seller
+  },
+  {
+    path: '/cabinet',
+    name: 'Cabinet',
+    component: Cabinet
+  },
+  {
+    path: '/contacts',
+    name: 'Contacts',
+    component: Contacts
+  },
+  {
+    path: '/filter',
+    name: 'Filter',
+    component: Filter
+  },
+  {
+    path: '/info',
+    name: 'Info',
+    component: Info
+  },
+  {
+    path: '/message',
+    name: 'Message',
+    component: Message
+  },
+  {
+    path: '/payments',
+    name: 'Payments',
+    component: Payments
+  },
+  {
+    path: '/questions',
+    name: 'Questions',
+    component: Questions
+  },
+  {
+    path: '/requisites',
+    name: 'Requisites',
+    component: Requisites
+  },
+  {
+    path: '/returnproduct',
+    name: 'ReturnProduct',
+    component: ReturnProduct
   }
 ]
 

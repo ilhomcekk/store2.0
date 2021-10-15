@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import Navbar from '../components/Navbar.vue'
+import Navbar from '../components/layout/Navbar.vue'
 import Slide from '../components/Slide.vue'
 import Magazin from '../components/Magazin.vue'
 import Cart from '../components/Cart.vue'

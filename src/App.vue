@@ -15,9 +15,8 @@
         padding-bottom: 2.5rem;
     }
     .add-product .container span{
-        margin-right: 10px;
+        margin-right: 0px;
         font-size: 15px;
-        color: #023047;
     }
     .add-product .container:nth-child(2) h1{
         font-size: 48px;
@@ -363,25 +362,11 @@
         box-shadow: 0px 0px 2px rgba(145, 158, 171, 0.24), 0px 16px 32px -4px rgba(145, 158, 171, 0.24);
         color: #FFF;
     }
-    .question .q__box .box .protsent{
-        border-radius: 50%;
-        height: 70px;
-        width: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 3px solid #FFF;
-        color: #FFF;
-    }
     .question .q__box .box p{
         font-size: 12px;
     }
     .p-customer span{
         color: #898989 !important;
-        margin-right: 1.5rem !important;
-    }
-    .p-customer span:nth-child(2){
-        border-bottom: 1px solid #C211A7;
     }
     .p-customer span:nth-child(2) i{
         color: #C211A7;
