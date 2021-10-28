@@ -1,7 +1,7 @@
 <template>
     <div class="back">
         <Navbar />
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12">
             <div class="order-menu">
                 <ul>
                     <a href="#">Как сделать заказ</a>
@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="border-bottom">
-            <div class="container mx-auto px-5 r-product">
+            <div class="container mx-auto px-12 r-product">
                 <div class="r-product__title">Правила возврата товаров</div>
                 <div class="product__title">Возврат товара надлежащего качества</div>
                 <h1>Срок возврата товара</h1>
@@ -45,15 +45,17 @@
                 <p>--- В случае отклонения заявки, покупатель вправе обратиться в независимую экспертизу. В случае, если независимой экспертизой будет подтверждено право покупателя на возврат товара, все расходы покупателя, связанные с проведением независимой экспертизы подлежат возмещению Продавцом.</p>
             </div>
         </div>
-        <div class="container mx-auto px-5 r-product__footer">
+        <div class="container mx-auto px-12 r-product__footer">
             <span>*</span>
             <p>Настоящие правила носят рекомендательный характер и не ограничивают покупателя в правах, связанных с предъявлением требований Продавцу, предусмотренных действующим законодательством.</p>
         </div>
+        <Footer />
     </div>
 </template>
 
 <script>
 import Navbar from '../components/layout/Navbar.vue'
+import Footer from '../components/layout/Footer.vue'
 
 export default {
   name: 'Home',
@@ -64,7 +66,8 @@ export default {
 
   },
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 }
 </script>
@@ -151,5 +154,100 @@ export default {
     .r-product__footer p{
         color: #898989;
         font-size: 13px;
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 1025px) {
+        .order-menu ul a{
+            font-size: 13px;
+        }
+        .order-menu{
+            margin-bottom: 0;
+        }
+    }
+    @media only screen and (max-width: 769px){
+        .order-menu{
+            display: none;
+        }
+        .requisites .text span{
+            font-size: 18px;
+            width: 31%;
+        }
+        .requisites .text p{
+            font-size: 18px;
+        }
+        .requisites h3{
+            font-size: 18px;
+            padding: 1rem 0;
+            margin: 0;
+        }
+        .r-product .warning span{
+            width: 70px !important;
+        }
+    }
+
+    @media only screen and (min-width: 376px) and (max-width: 600px){
+        .border-bottom{
+            margin-bottom: 1.5rem;
+        }
+        .r-product .r-product__title{
+            font-size: 32px;
+            margin-bottom: 1rem;
+        }
+        .r-product .product__title{
+            font-size: 24px;
+            margin-bottom: 0.8rem;
+        }
+        .r-product h1{
+            margin-bottom: 0.2rem;
+            font-size: 20px;
+        }
+        .r-product p{
+            font-size: 14px;
+            margin: 0.5rem 0;
+        }
+        .r-product .warning span{
+            display: none;
+        }
+        .r-product .warning p{
+            font-size: 12px;
+        }
+        .r-product .warning{
+            padding: 0 1rem;
+        }
+        .r-product__footer{
+            padding-bottom: 1.5rem;
+        }
+        .r-product__footer p{
+            font-size: 10px;
+        }
+    }
+
+    @media only screen and (max-width: 376px) {
+        .border-bottom{
+            margin-bottom: 1.5rem;
+        }
+        .r-product__title{
+            font-size: 32px;
+            margin-bottom: 1rem;
+        }
+        .r-product .product__title{
+            font-size: 24px;
+            margin-bottom: 0.7rem;
+        }
+        .r-product h1{
+            margin-bottom: 0;
+        }
+        .r-product p{
+            margin: 5px 0;
+        }
+        .r-product .warning span{
+            display: none;
+        }
+        .r-product .warning p{
+            font-size: 14px;
+        }
+        .r-product__footer{
+            padding-bottom: 1.5rem;
+        }
     }
 </style>

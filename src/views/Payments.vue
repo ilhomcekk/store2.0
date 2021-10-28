@@ -1,26 +1,15 @@
 <template>
     <div class="back">
         <Navbar />
-        <div class="info__menu">
-            <div class="container mx-auto px-5">
-                <ul>
-                    <a href="#"><img src="../assets/image/Vector (5).png" alt="not found">Главная</a>
-                    <a href="#"><img src="../assets/image/Vector (6).png" alt="not found"> Избранные</a>
-                    <a href="#"><img src="../assets/image/Vector (7).png" alt="not found"> Мои заказы</a>
-                    <a href="#"><img src="../assets/image/Group (1).png" alt="not found"> Мои сообщения</a>
-                    <a href="#"><img src="../assets/image/Vector (12).png" alt="not found"> Мои платежи</a>
-                    <a href="#"><img src="../assets/image/Vector (9).png" alt="not found"> Мои данные</a>
-                </ul>
-            </div>
-        </div>
-        <div class="container mx-auto px-5 pages">
+        <second-navbar />
+        <div class="container mx-auto px-12 pages">
             <span>Главная страница / </span>
             <span> Мои платежи</span>
         </div>
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12">
             <div class="payment__title">Мои платежи</div>
         </div>
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12 mb-12">
             <table style="width:100%">
                 <tr>
                     <th>ID заказа</th>
@@ -29,84 +18,80 @@
                     <th>Способ оплаты</th>
                     <th>Статус платежа</th>
                 </tr>
-                <tr>
-                    <td>№23</td>
-                    <td>23.09.21</td>
-                    <td>2000 ₽</td>
-                    <td><img src="../assets/image/visa-card-png-4 1.png" alt="not found"></td>
-                    <td>Исполнен</td>
-                </tr>
-                <tr>
-                    <td>№45</td>
-                    <td>23.09.21</td>
-                    <td>2000 ₽</td>
-                    <td><img src="../assets/image/visa-card-png-4 1.png" alt="not found"></td>
-                    <td>Не исполнено</td>
-                </tr>
-                <tr>
-                    <td>№123</td>
-                    <td>23.09.21</td>
-                    <td>2000 ₽</td>
-                    <td><img src="../assets/image/visa-card-png-4 1.png" alt="not found"></td>
-                    <td>Исполнено</td>
-                </tr>
-                <tr>
-                    <td>№55</td>
-                    <td>23.09.21</td>
-                    <td>2000 ₽</td>
-                    <td><img src="../assets/image/visa-card-png-4 1.png" alt="not found"></td>
-                    <td>Не исполнено</td>
-                </tr>
-                <tr>
-                    <td>№89</td>
-                    <td>23.09.21</td>
-                    <td>2000 ₽</td>
-                    <td><img src="../assets/image/visa-card-png-4 1.png" alt="not found"></td>
-                    <td>Исполнен</td>
-                </tr>
+                <Order v-for="order in orders" :key="order.id" :order="order" />
             </table>
         </div>
+        <Footer />
     </div>
 </template>
 
 <script>
 import Navbar from '../components/layout/Navbar.vue'
+import Footer from '../components/layout/Footer.vue'
+import SecondNavbar from '../components/layout/SecondNavbar.vue'
+import Order from '../components/Order.vue'
 
 export default {
   name: 'Home',
   data: () => ({
-
+    orders: [
+      {
+        id: 30,
+        date: '23.09.21',
+        price: '1000',
+        info: 'Не исполнено'
+      },
+      {
+        id: 45,
+        date: '23.09.21',
+        price: '1000',
+        info: 'Не исполнено'
+      },
+      {
+        id: 53,
+        date: '23.09.21',
+        price: '2000',
+        info: 'Не исполнено'
+      },
+      {
+        id: 65,
+        date: '23.09.21',
+        price: '3000',
+        info: 'Исполнен'
+      },
+      {
+        id: 67,
+        date: '23.09.21',
+        price: '2000',
+        info: 'Не исполнено'
+      },
+      {
+        id: 69,
+        date: '23.09.21',
+        price: '4000',
+        info: 'Исполнен'
+      },
+      {
+        id: 90,
+        date: '23.09.21',
+        price: '15000',
+        info: 'Исполнен'
+      }
+    ]
   }),
   methods: {
 
   },
   components: {
-    Navbar
+    Navbar,
+    SecondNavbar,
+    Footer,
+    Order
   }
 }
 </script>
 
 <style scoped>
-    .info__menu{
-        padding: 1.5rem 0;
-        margin-bottom: 1.5rem;
-    }
-    .info__menu ul{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .info__menu ul a{
-        color: #023047;
-        display: flex;
-        align-items: center;
-    }
-    .info__menu ul a:nth-child(5){
-        color: #C211A7;
-    }
-    .info__menu ul a img{
-        margin-right: 1rem;
-    }
     .pages{
         padding: 0 1.25rem 2.5rem 1.25rem;
     }
@@ -133,27 +118,5 @@ export default {
     }
     table tr th:last-child{
         border-radius: 0px 8px 0px 0px;
-    }
-    table tr td{
-        text-align: center;
-        color: #005964;
-        font-size: 19px;
-        font-weight: normal;
-        border-bottom: 1px solid #D9D9D9;
-        background: #F8F8FA;
-        padding: 1.5rem 0;
-    }
-    table tr:last-child td:first-child{
-        border-radius: 0 0 0 8px;
-    }
-    table tr:last-child td:last-child{
-        border-radius: 0 0 8px 0;
-    }
-    table tr:last-child td{
-        border-bottom: none;
-    }
-    table tr td img{
-        text-align: center;
-        margin: 0 auto;
     }
 </style>

@@ -78,7 +78,7 @@ export default {
         background-color: #E5E5E5;
     }
     .show__all {
-        background: #058490;
+        background: #222F3E;
         border-radius: 8px;
         font-size: 18px;
         line-height: 100%;

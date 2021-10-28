@@ -1,16 +1,16 @@
 <template>
     <div class="back">
         <Navbar />
-        <div class="container mx-auto px-5 pages">
+        <div class="container mx-auto px-12 pages">
             <span>Главная страница / </span>
             <span>Мужчинам / </span>
             <span>Одежда / </span>
             <span>Свитшоты </span>
         </div>
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12">
             <div class="filter__title">Мужские свитшоты</div>
         </div>
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12">
             <div class="filter">
                 <div class="sidebar__filter">
                     <div class="filter__price">
@@ -165,22 +165,11 @@
                         </ul>
                     </div>
                     <div class="products">
-                        <Cart />
-                        <Cart />
-                        <Cart />
-                        <Cart />
-                        <Cart />
-                        <Cart />
-                        <Cart />
-                        <Cart />
-                        <Cart />
-                        <Cart />
-                        <Cart />
-                        <Cart />
-                        <Cart />
-                        <Cart />
-                        <Cart />
-                        <Cart />
+                        <div class="grid grid-cols-4 gap-4">
+                            <div v-for="cart in carts" :key="cart.id">
+                                <Cart :cart="cart" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -190,6 +179,7 @@
 
 <script>
 import Navbar from '../components/layout/Navbar.vue'
+import Cart from '../components/Cart.vue'
 
 export default {
   name: 'Home',
@@ -199,8 +189,14 @@ export default {
   methods: {
 
   },
+  computed: {
+    carts () {
+      return this.$store.getters.CARTS
+    }
+  },
   components: {
-    Navbar
+    Navbar,
+    Cart
   }
 }
 </script>
@@ -455,7 +451,7 @@ export default {
         cursor: pointer;
     }
     .filter .sidebar__filter .reset{
-        background: linear-gradient(90deg, #C311A7 3.86%, #A91BA5 100.16%);        
+        background: linear-gradient(90deg, #C311A7 3.86%, #A91BA5 100.16%);
         border-radius: 5px;
         color: #FFF;
         width: 160px;
@@ -497,7 +493,6 @@ export default {
         justify-content: space-between;
     }
     .filter .products .cart__box.shadow-xl{
-        width: 24%;
         margin-top: 12px;
         margin-bottom: 12px;
     }

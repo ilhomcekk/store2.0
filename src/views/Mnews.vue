@@ -1,14 +1,14 @@
 <template>
     <div class="back">
         <Navbar />
-        <div class="container mx-auto px-5 pages">
+        <div class="container mx-auto px-12 pages">
             <span>Главная страница / </span>
             <span>Новости подробно</span>
         </div>
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12">
             <div class="mnews__title">Российская компания Wildberries планирует <br> выход на рынок Узбекистана</div>
         </div>
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12">
             <div class="mnews__boxes">
                 <div class="box">
                     <div class="box__image">
@@ -62,15 +62,13 @@
                 </div>
             </div>
         </div>
+        <Footer />
     </div>
 </template>
 
 <script>
 import Navbar from '../components/layout/Navbar.vue'
-import Slide from '../components/Slide.vue'
-import Magazin from '../components/Magazin.vue'
-import Cart from '../components/Cart.vue'
-import Title from '../components/Title.vue'
+import Footer from '../components/layout/Footer.vue'
 
 export default {
   name: 'Home',
@@ -82,10 +80,7 @@ export default {
   },
   components: {
     Navbar,
-    Slide,
-    Magazin,
-    Cart,
-    Title
+    Footer
   }
 }
 </script>
@@ -147,7 +142,6 @@ export default {
     .mnews__boxes .box:first-child .sidebar .sidebar__box{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
     .mnews__boxes .box:first-child .sidebar .sidebar__box img{
         margin-bottom: 20px;
@@ -159,6 +153,9 @@ export default {
     .mnews__boxes .box:first-child .shows a{
         color: #374C91;
         cursor: pointer;
+    }
+    .mnews__boxes .box:first-child .shows a:hover{
+        text-decoration: underline;
     }
     .mnews__boxes .box:first-child .shows span:last-child{
         margin-left: 5rem;
@@ -202,7 +199,245 @@ export default {
         padding: 10px 15px;
         color: #FCF6F6;
     }
+    .mnews__boxes .box:nth-child(2) .late__box .n__date a:hover{
+        background: #15626B !important;
+        box-shadow: unset !important;
+    }
     .mnews__boxes .box:nth-child(2) .late__box .n__date span{
         color: #005964;
+    }
+
+    @media only screen and (max-width: 1025px){
+        .pages{
+            padding: 1rem 1.25rem !important;
+            font-size: 14px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .late__box .late__title{
+            width: 100% !important;
+            line-height: 20px !important;
+            margin-top: 0.5rem !important;
+        }
+        .mnews__boxes .box:first-child .sidebar{
+            flex-wrap: wrap !important;
+        }
+        .mnews__boxes .box:first-child .sidebar .sidebar__img{
+            width: 100% !important;
+        }
+        .mnews__boxes .box:first-child .sidebar .sidebar__box{
+            width: 100% !important;
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            flex-wrap: wrap !important;
+            padding: 20px 0 !important;
+        }
+        .mnews__boxes .box:first-child .sidebar .sidebar__box img{
+            width: 49% !important;
+            margin-bottom: 10px !important;
+        }
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 1025px){
+        .mnews__title{
+            font-size: 32px;
+            line-height: 30px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .box__title{
+            font-size: 26px !important;
+            line-height: 24px !important;
+        }
+    }
+
+    @media only screen and (min-width: 600px) and (max-width: 769px){
+        .mnews__title{
+            font-size: 24px !important;
+            line-height: 22px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .box__title{
+            font-size: 22px !important;
+            line-height: 22px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .late__box .n__date a{
+            font-size: 14px !important;
+            padding: 3px 10px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .late__box .n__date span{
+            font-size: 14px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .late__box p{
+            margin: 0.5rem 0 1rem 0 !important;
+        }
+        .mnews__boxes .box:nth-child(2) .late__box .late__title{
+            width: 100% !important;
+            line-height: 20px !important;
+            margin-top: 0.5rem !important;
+        }
+    }
+
+    @media only screen and (min-width: 415px) and (max-width: 769px){
+        .mnews__title{
+            font-size: 24px !important;
+            line-height: 22px !important;
+            margin-bottom: 1rem !important;
+        }
+        .mnews__boxes{
+            flex-wrap: wrap !important;
+        }
+        .mnews__boxes .box{
+            width: 100% !important;
+        }
+        .mnews__boxes .box:first-child .box__image span{
+            top: 15px !important;
+            left: 15px !important;
+            font-size: 12px !important;
+            padding: 5px !important;
+        }
+        .mnews__boxes .box:first-child p{
+            margin: 7px 0 !important;
+        }
+        .mnews__boxes .box:first-child .box__image{
+            margin-bottom: 1rem !important;
+        }
+        .mnews__boxes .box:first-child .sidebar{
+            margin-top: 1rem !important;
+        }
+        .mnews__boxes .box .shows{
+            margin-bottom: 1rem !important;
+        }
+        .mnews__boxes .box:first-child .sidebar .sidebar__box{
+            padding: 20px 0 0 0 !important;
+        }
+        .mnews__boxes .box:nth-child(2) .box__title{
+            font-size: 22px !important;
+            line-height: 22px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .late__box .n__date a{
+            font-size: 14px !important;
+            padding: 3px 10px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .late__box .n__date span{
+            font-size: 14px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .lates__boxes{
+            display: flex !important;
+            flex-wrap: wrap !important;
+        }
+        .mnews__boxes .box:nth-child(2) .lates__boxes .late__box{
+            width: 48% !important;
+            margin: 1rem 5px !important;
+            padding-bottom: 0 !important;
+            height: 410px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .late__box .late__text{
+            padding-right: 0 !important;
+        }
+        .mnews__boxes .box:nth-child(2) .late__box p{
+            margin: 0.5rem 0 1rem 0 !important;
+            font-size: 14px !important;
+        }
+        .mnews__boxes .box:first-child .sidebar .sidebar__img{
+            height: 300px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .late__box .late__title{
+            width: 100% !important;
+            line-height: 20px !important;
+            margin-top: 0.5rem !important;
+            font-size: 16px !important;
+        }
+    }
+
+    @media only screen and (max-width: 415px){
+        .mnews__title{
+            font-size: 20px !important;
+            line-height: 22px !important;
+            margin-bottom: 1rem !important;
+        }
+        .mnews__title br{
+            display: none !important;
+        }
+        .mnews__boxes{
+            flex-wrap: wrap !important;
+        }
+        .mnews__boxes .box{
+            width: 100% !important;
+        }
+        .mnews__boxes .box:first-child .box__image span{
+            top: 15px !important;
+            left: 15px !important;
+            font-size: 12px !important;
+            padding: 5px !important;
+        }
+        .mnews__boxes .box:first-child p{
+            margin: 7px 0 !important;
+            font-size: 12px !important;
+        }
+        .mnews__boxes .box:first-child .box__image{
+            margin-bottom: 1rem !important;
+        }
+        .mnews__boxes .box:first-child .sidebar{
+            margin-top: 1rem !important;
+        }
+        .mnews__boxes .box .shows{
+            margin-bottom: 1rem !important;
+        }
+        .mnews__boxes .box:first-child .sidebar .sidebar__box{
+            padding: 20px 0 0 0 !important;
+        }
+        .mnews__boxes .box:nth-child(2) .box__title{
+            font-size: 22px !important;
+            line-height: 22px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .late__box .n__date a{
+            font-size: 14px !important;
+            padding: 3px 10px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .late__box .n__date span{
+            font-size: 14px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .lates__boxes{
+            display: flex !important;
+            flex-wrap: wrap !important;
+        }
+        .mnews__boxes .box:nth-child(2) .lates__boxes .late__box{
+            width: 100% !important;
+            margin: 1rem 5px !important;
+            padding-bottom: 0 !important;
+            height: 465px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .late__box .late__text{
+            padding-right: 0 !important;
+        }
+        .mnews__boxes .box:nth-child(2) .late__box p{
+            margin: 0.5rem 0 1rem 0 !important;
+            font-size: 14px !important;
+        }
+        .mnews__boxes .box:first-child .sidebar .sidebar__img{
+            height: 300px !important;
+        }
+        .mnews__boxes .box:nth-child(2) .late__box .late__title{
+            width: 100% !important;
+            line-height: 20px !important;
+            margin-top: 0.5rem !important;
+            font-size: 16px !important;
+        }
+    }
+
+    @media (max-width: 376px){
+        .mnews__boxes .box:nth-child(2) .lates__boxes .late__box{
+            height: 435px !important;
+        }
+    }
+
+    @media (max-width: 360px){
+        .mnews__boxes .box:nth-child(2) .lates__boxes .late__box{
+            height: 435px !important;
+            margin: 5px 0 !important;
+        }
+        .mnews__boxes .box:first-child .shows span:last-child{
+            font-size: 12px !important;
+            margin-left: 1rem !important;
+        }
+        .mnews__boxes .box:first-child .shows a{
+            font-size: 12px !important;
+        }
     }
 </style>

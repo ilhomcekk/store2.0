@@ -1,19 +1,8 @@
 <template>
     <div class="back">
         <Navbar />
-        <div class="info__menu">
-            <div class="container mx-auto px-5">
-                <ul>
-                    <a href="#"><img src="../assets/image/Vector (5).png" alt="not found">Главная</a>
-                    <a href="#"><img src="../assets/svg/Vector (3).svg" alt="not found"> Избранные</a>
-                    <a href="#"><img src="../assets/svg/Vector (4).svg" alt="not found"> Мои заказы</a>
-                    <a href="#"><img src="../assets/svg/Group.svg" alt="not found"> Мои сообщения</a>
-                    <a href="#"><img src="../assets/svg/Vector (5).svg" alt="not found"> Мои платежи</a>
-                    <a href="#"><img src="../assets/svg/Vector (6).svg" alt="not found"> Мои данные</a>
-                </ul>
-            </div>
-        </div>
-        <div class="container mx-auto px-5">
+        <second-navbar :active="active" />
+        <div class="container mx-auto px-12 mb-12">
             <div class="info__boxes">
                 <div class="box">
                     <div class="user">
@@ -60,11 +49,14 @@
                 </div>
             </div>
         </div>
+        <Footer />
     </div>
 </template>
 
 <script>
 import Navbar from '../components/layout/Navbar.vue'
+import Footer from '../components/layout/Footer.vue'
+import SecondNavbar from '../components/layout/SecondNavbar.vue'
 
 export default {
   name: 'Home',
@@ -75,7 +67,9 @@ export default {
 
   },
   components: {
-    Navbar
+    Navbar,
+    Footer,
+    SecondNavbar
   }
 }
 </script>
@@ -83,7 +77,6 @@ export default {
 <style scoped>
     .info__menu{
         padding: 1.5rem 0;
-        background: #000;
         margin-bottom: 1.5rem;
     }
     .info__menu ul{

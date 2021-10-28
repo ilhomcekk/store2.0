@@ -1,26 +1,15 @@
 <template>
     <div class="back">
-        <Navbar />
-        <div class="info__menu">
-            <div class="container mx-auto px-5">
-                <ul>
-                    <a href="#"><img src="../assets/image/Vector (5).png" alt="not found">Главная</a>
-                    <a href="#"><img src="../assets/image/Vector (6).png" alt="not found"> Избранные</a>
-                    <a href="#"><img src="../assets/image/Vector (7).png" alt="not found"> Мои заказы</a>
-                    <a href="#"><img src="../assets/image/Group.png" alt="not found"> Мои сообщения</a>
-                    <a href="#"><img src="../assets/image/Vector (8).png" alt="not found"> Мои платежи</a>
-                    <a href="#"><img src="../assets/image/Vector (9).png" alt="not found"> Мои данные</a>
-                </ul>
-            </div>
-        </div>
-        <div class="container mx-auto px-5 pages">
+        <Navbar :black="gray" />
+        <second-navbar />
+        <div class="container mx-auto px-12 pages">
             <span>Главная страница / </span>
             <span> Мои сообщения</span>
         </div>
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12">
             <div class="message__title">Мои сообщения</div>
         </div>
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12 mb-12">
             <div class="message">
                 <div class="title">Чат поддержки</div>
                 <p>Рада приветствовать Вас в (Сайт названия) Я Ева Вайлет - виртуальный помощник службы поддержки. Если у Вас возник вопрос - задайте его в этом чате, и я с удовольствием отвечу на него.</p>
@@ -40,11 +29,14 @@
                 </div>
             </div>
         </div>
+        <Footer />
     </div>
 </template>
 
 <script>
 import Navbar from '../components/layout/Navbar.vue'
+import Footer from '../components/layout/Footer.vue'
+import SecondNavbar from '../components/layout/SecondNavbar.vue'
 
 export default {
   name: 'Home',
@@ -55,7 +47,9 @@ export default {
 
   },
   components: {
-    Navbar
+    Navbar,
+    Footer,
+    SecondNavbar
   }
 }
 </script>
@@ -94,7 +88,7 @@ export default {
     }
     .message{
         background: #F8F8FA;
-        border-radius: 0px 0px 8px 8px;
+        border-radius: 8px 8px 0px 0px;
         height: 400px;
         overflow-y: scroll;
     }

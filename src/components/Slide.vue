@@ -14,20 +14,20 @@
     </div>
 </template>
 <script>
-import { Splide, SplideSlide } from '@splidejs/vue-splide';
-import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import { Splide, SplideSlide } from '@splidejs/vue-splide'
+import '@splidejs/splide/dist/css/themes/splide-default.min.css'
 
 export default {
-    data: () => ({
-        options: {
-            rewind : true,
-            width  : '100%',
-            gap    : '1rem',
-        },
-    }),
-    components: {
-        Splide,
-        SplideSlide,
+  data: () => ({
+    options: {
+      rewind: true,
+      width: '100%',
+      gap: '1rem'
     }
+  }),
+  components: {
+    Splide,
+    SplideSlide
+  }
 }
 </script>

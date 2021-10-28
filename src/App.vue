@@ -248,7 +248,7 @@
         color: #FFF;
         padding: 8px 30px;
     }
-    .container.px-5.c-products{
+    .container.px-12.c-products{
         padding-top: 4rem !important;
         padding-bottom: 2.5rem;
     }

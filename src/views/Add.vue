@@ -7,7 +7,7 @@
                 <span>Рубашки / </span>
                 <span>Базовая рубашка </span>
             </div>
-            <div class="container mx-auto px-5">
+            <div class="container mx-auto px-12">
                 <h1>Базовая рубашка</h1>
                 <div class="product-action">
                     <div class="stars">
@@ -156,9 +156,9 @@
                                     <div class="w-4">
                                         <h6>3</h6>
                                     </div>
-                                    <progress-line :val="3" class="progress__align" />
+                                    <progress-line :val="prot" class="progress__align" />
                                 </div>
-                                <div class="percent">3%</div>
+                                <div class="percent">{{ prot }}%</div>
                             </div>
                             <div class="lines">
                                 <div class="flex flex-row w-full">
@@ -183,7 +183,7 @@
                     <div class="q__box">
                         <div class="box">
                             <div class="protsent">
-                                <Progress :value="65.5" />
+                                <Progress :value="70.5" />
                             </div>
                             <p>Barcha sotuvlar</p>
                         </div>
@@ -223,7 +223,7 @@
                 </div>
             </div>
             <!-- last -->
-            <div class="container mx-auto px-5 mb-12">
+            <div class="container mx-auto px-12 mb-12">
                 <div class="recently-products">
                     <div class="recently__title">Вы недавно смотрели</div>
                 <div class="grid grid-cols-5 gap-3" >
@@ -250,7 +250,7 @@ import ProgressLine from '../components/progress/ProgressLine.vue'
 export default {
   name: 'Home',
   data: () => ({
-
+    prot: 80
   }),
   methods: {
 

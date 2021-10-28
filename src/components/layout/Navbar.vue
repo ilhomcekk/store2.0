@@ -1,6 +1,6 @@
 <template>
     <div class="navbar__back">
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12">
             <div class="flex justify-between py-2">
                 <div class="flex navbar__text ">
                     <a href="#" class="flex">
@@ -80,16 +80,16 @@
                             </a>
                         </li>
                         <li class="profile__item">
-                            <a href="#">
+                            <router-link tag="a" to="/payments">
                                 <i class="fas fa-chevron-right"></i>
                                 Мои платежи
-                            </a>
+                            </router-link>
                         </li>
                         <li class="profile__item">
-                            <a href="#">
+                            <router-link tag="a" to="/message">
                                 <i class="fas fa-chevron-right"></i>
                                 Мои сообщения
-                            </a>
+                            </router-link>
                         </li>
                         <li class="profile__item">
                             <a href="#">
@@ -98,10 +98,10 @@
                             </a>
                         </li>
                         <li class="profile__item">
-                            <a href="#">
+                            <router-link tag="a" to="/info">
                                 <i class="fas fa-chevron-right"></i>
                                 Мои данные
-                            </a>
+                            </router-link>
                         </li>
                         <li class="profile__item">
                             <a href="#">
@@ -111,6 +111,7 @@
                         </li>
                     </ul>
                 </div>
+                <div class="hover__circle"></div>
             </div>
         </div>
     </div>
@@ -135,7 +136,7 @@ export default {
 </script>
 <style scoped>
     .navbar__back {
-        background: #058490;
+        background: #222F3E;
     }
     .navbar__text a {
         font-size: 14px;
@@ -203,14 +204,14 @@ export default {
     .profile__dropdown {
         position: absolute;
         background: #ffffff;
-        z-index: 99;
+        z-index: 9999;
         right: 0;
         margin-top: -20px;
     }
     .profile__header {
         display: flex;
         flex-direction: row;
-        background: #058490;
+        background: #222F3E;
         padding: 30px 15px 10px 15px;
     }
     .profile__title {
@@ -223,7 +224,9 @@ export default {
         margin-left: 10px;
     }
     .profile__bottom {
+        position: relative;
         padding: 15px 15px;
+        z-index: 9999;
     }
     .profile__ul {
         padding-left: 5px;
@@ -242,5 +245,16 @@ export default {
     }
     .profile__item a i {
         margin-right: 5px;
+    }
+    .hover__circle {
+        position: absolute;
+        width: 60px;
+        height: 20px;
+        background: #F8F8F8;
+        border-radius: 50%;
+        left: 0;
+        right: 0;
+        margin: -50px auto 0 auto;
+        z-index: 0;
     }
 </style>

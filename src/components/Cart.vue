@@ -1,7 +1,8 @@
 <template>
     <div class="cart__box shadow-xl">
-        <div class="cart__image">
+        <div class="cart__image" @mouseover="listOne = true" @mouseleave="listOne = false">
             <img :src="cart.img" alt="">
+            <span v-if="listOne" @click="listOne = false" class="fast__review">Быстрый просмотр</span>
             <button>
                 <i class="far fa-heart"></i>
             </button>
@@ -19,17 +20,20 @@
                 </div>
             </div>
             <div class="cart__add">
-                <button>
+                <router-link tag="button" to="/add">
                     <span>В корзину</span>
                     <img src="../assets/svg/cart.svg" alt="">
-                </button>
+                </router-link>
             </div>
         </div>
     </div>
 </template>
 <script>
 export default {
-  props: ['cart']
+  props: ['cart'],
+  data: () => ({
+    listOne: false
+  })
 }
 </script>
 <style scoped>
@@ -62,7 +66,7 @@ export default {
     }
     .cart__add button {
         display: flex;
-        background: #FC7D00;
+        background: #222F3E;
         border-radius: 8px;
         width: 100%;
         font-size: 16px;
@@ -104,7 +108,7 @@ export default {
         font-weight: 500;
         font-size: 17px;
         line-height: 21px;
-        color: #005964;
+        color: #FC7D00;
         margin-top: 10px;
     }
     .cart__price p {
@@ -114,5 +118,23 @@ export default {
         line-height: 15px;
         margin-top: 14px;
         text-decoration: line-through;
+    }
+    .fast__review {
+        position: absolute;
+        top: 0;
+        margin-top: 0px;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 22px;
+        color: #FC7D00;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        background: #F8F8FA;
+        border-radius: 25px;
+        width: 60%;
+        padding: 5px 0;
+        text-align: center;
     }
 </style>

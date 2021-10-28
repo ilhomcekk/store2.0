@@ -1,19 +1,8 @@
 <template>
     <div class="back">
         <Navbar />
-        <div class="info__menu">
-            <div class="container mx-auto px-5">
-                <ul>
-                    <a href="#"><img src="../assets/image/Vector (5).png" alt="not found">Главная</a>
-                    <a href="#"><img src="../assets/image/Vector (6).png" alt="not found"> Избранные</a>
-                    <a href="#"><img src="../assets/image/Vector (7).png" alt="not found"> Мои заказы</a>
-                    <a href="#"><img src="../assets/image/Group (1).png" alt="not found"> Мои сообщения</a>
-                    <a href="#"><img src="../assets/image/Vector (8).png" alt="not found"> Мои платежи</a>
-                    <a href="#"><img src="../assets/image/Vector (13).png" alt="not found"> Мои данные</a>
-                </ul>
-            </div>
-        </div>
-        <div class="container mx-auto px-5">
+        <second-navbar />
+        <div class="container mx-auto px-12 mb-12">
             <div class="user__cabinet">
                 <div class="user">
                     <div class="user__img">
@@ -82,11 +71,14 @@
                 </div>
             </div>
         </div>
+        <Footer />
     </div>
 </template>
 
 <script>
 import Navbar from '../components/layout/Navbar.vue'
+import Footer from '../components/layout/Footer.vue'
+import SecondNavbar from '../components/layout/SecondNavbar.vue'
 
 export default {
   name: 'Home',
@@ -97,7 +89,9 @@ export default {
 
   },
   components: {
-    Navbar
+    Navbar,
+    Footer,
+    SecondNavbar
   }
 }
 </script>

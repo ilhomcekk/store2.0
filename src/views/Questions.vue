@@ -1,11 +1,11 @@
 <template>
     <div class="back">
         <Navbar />
-        <div class="container mx-auto px-5 pages">
+        <div class="container mx-auto px-12 pages">
             <span>Главная страница / </span>
             <span> FAQ</span>
         </div>
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12">
             <div class="questions__title">Часто задаемевый вопросы</div>
             <div class="questions__box">
                 <div class="box">
@@ -59,11 +59,13 @@
                 </div>
             </div>
         </div>
+        <Footer />
     </div>
 </template>
 
 <script>
 import Navbar from '../components/layout/Navbar.vue'
+import Footer from '../components/layout/Footer.vue'
 
 export default {
   name: 'Home',
@@ -74,7 +76,8 @@ export default {
 
   },
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 }
 </script>
@@ -110,6 +113,9 @@ export default {
         display: flex;
         align-items: center;
         padding-left: 1rem;
+    }
+    .questions__box .box .questions__text .text2:hover{
+        color: #15626B;
     }
     .questions__box .box .questions__text .text2 i{
         height: 50px;
@@ -172,5 +178,133 @@ export default {
         color: #FFF;
         padding: 15px 30px;
         margin: 0 auto;
+    }
+    .c__box button:hover{
+        background: #A91BA5 !important;
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 1025px){
+        .questions__box .box{
+            width: auto;
+        }
+        .questions__box .c__box{
+            margin-left: 0;
+            padding: 1rem 1.2rem;
+        }
+        .questions__box .c__box .box__title{
+            font-size: 20px;
+        }
+        .c__box input{
+            padding: 7px 10px;
+        }
+        .questions__box .box .questions__text p{
+            font-size: 18px !important;
+        }
+        .questions__box .box .questions__text .text2 i{
+            height: 40px;
+            width: 40px;
+            margin-right: 1rem;
+            font-size: 20px;
+        }
+        .questions__box .box .questions__text .text__box p{
+            font-size: 15px !important;
+        }
+    }
+
+    @media only screen and (max-width: 769px){
+        .questions__box{
+            flex-wrap: wrap;
+        }
+        .questions__box .box{
+            width: 100%;
+            margin: auto;
+        }
+        .questions__box .c__box{
+            width: 80%;
+            margin: 2rem auto;
+        }
+    }
+
+    @media only screen and (min-width: 376px) and (max-width: 600px){
+        .questions__title{
+            font-size: 32px;
+            margin-bottom: 0;
+        }
+        .questions__box .c__box{
+            margin-left: 0;
+            padding: 1rem 1.2rem;
+        }
+        .questions__box .c__box .box__title{
+            font-size: 20px;
+        }
+        .c__box input{
+            padding: 7px 10px;
+        }
+        .questions__box .box .questions__text .text2 p{
+            font-size: 16px !important;
+        }
+        .questions__box .box .questions__text p{
+            font-size: 18px !important;
+        }
+        .questions__box .box .questions__text .text2 i{
+            height: 40px;
+            width: 50px;
+            margin-right: 0.5rem;
+            font-size: 18px;
+        }
+        .questions__box .box .questions__text .text__box p{
+            font-size: 15px !important;
+        }
+        .questions__box .box .questions__text .text__box{
+            width: 100%;
+        }
+        .questions__box .box .questions__text .text__box p{
+            font-size: 12px !important;
+        }
+    }
+
+    @media only screen and (max-width: 376px) {
+        .questions__title{
+            font-size: 32px;
+            margin-bottom: 0;
+        }
+        .questions__box .c__box{
+            padding: 1rem 1.2rem;
+            margin: 1rem auto;
+            width: 100%;
+            height: 420px;
+        }
+        .questions__box .c__box .box__title{
+            font-size: 20px;
+        }
+        .c__box input{
+            padding: 3px 10px;
+            border-radius: 4px;
+        }
+        .questions__box .box .questions__text .text2 p{
+            font-size: 14px !important;
+        }
+        .questions__box .box .questions__text p{
+            font-size: 18px !important;
+        }
+        .questions__box .box .questions__text .text__box{
+            width: 100%;
+            padding: 1rem;
+        }
+        .questions__box .box .questions__text .text__box p{
+            font-size: 12px !important;
+        }
+        .questions__box .box .questions__text .text2 i{
+            height: 30px;
+            width: 40px;
+            margin-right: 0.5rem;
+            font-size: 11px;
+        }
+        .c__box textarea{
+            border-radius: 4px;
+        }
+        .c__box button{
+            padding: 10px 30px;
+        }
     }
 </style>

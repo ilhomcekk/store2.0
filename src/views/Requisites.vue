@@ -1,7 +1,7 @@
 <template>
     <div class="back">
         <Navbar />
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12">
             <div class="order-menu">
                 <ul>
                     <a href="#">Как сделать заказ</a>
@@ -14,7 +14,7 @@
                 </ul>
             </div>
         </div>
-        <div class="container mx-auto px-5 requisites">
+        <div class="container mx-auto px-12 requisites">
             <div class="requisites__title">Реквизиты</div>
             <div class="text">
                 <span>Полное наименование</span>
@@ -59,11 +59,13 @@
             <h3>Обращаем внимание, что данные реквизиты не предназначены для оплаты заказов</h3>
             <h3>Оплата заказа производится только через Личный кабинет</h3>
         </div>
+        <Footer />
     </div>
 </template>
 
 <script>
 import Navbar from '../components/layout/Navbar.vue'
+import Footer from '../components/layout/Footer.vue'
 
 export default {
   name: 'Home',
@@ -74,7 +76,8 @@ export default {
 
   },
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 }
 </script>
@@ -124,5 +127,72 @@ export default {
         margin-left: 5rem;
         font-size: 20px;
         width: 50%;
+    }
+    @media only screen and (min-width: 769px) and (max-width: 1025px) {
+        .order-menu ul a{
+            font-size: 13px;
+        }
+        .order-menu{
+            margin-bottom: 0;
+        }
+    }
+    @media only screen and (max-width: 769px){
+        .order-menu{
+            display: none;
+        }
+        .requisites .text span{
+            font-size: 18px;
+            width: 31%;
+        }
+        .requisites .text p{
+            font-size: 18px;
+        }
+        .requisites h3{
+            font-size: 18px;
+            padding: 1rem 0;
+            margin: 0;
+        }
+    }
+
+    @media only screen and (min-width: 376px) and (max-width: 600px){
+        .requisites .requisites__title{
+            font-size: 32px;
+            margin-bottom: 1rem;
+        }
+        .requisites .text{
+            flex-direction: column;
+            margin: 12px 0;
+        }
+        .requisites .text span{
+            width: 100%;
+        }
+        .requisites .text p{
+            font-size: 16px;
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 376px){
+        .requisites .requisites__title{
+            font-size: 32px;
+            margin-bottom: 1rem;
+        }
+        .requisites .text{
+            flex-direction: column;
+            margin: 12px 0;
+        }
+        .requisites .text span{
+            width: 100%;
+            font-size: 16px;
+        }
+        .requisites .text p{
+            font-size: 14px;
+            margin-left: 0;
+            width: 100%;
+        }
+        .requisites h3{
+            font-size: 14px;
+            padding: 0.5rem 0;
+        }
     }
 </style>

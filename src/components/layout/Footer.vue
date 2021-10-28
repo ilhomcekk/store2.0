@@ -87,7 +87,7 @@ export default {
 </script>
 <style scoped>
     .footer__back {
-        background: #058490;
+        background: #222F3E;
     }
     .footer__box {
         display: flex;

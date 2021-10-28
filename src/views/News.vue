@@ -1,14 +1,14 @@
 <template>
     <div class="back">
         <Navbar />
-        <div class="container mx-auto px-5 pages">
+        <div class="container mx-auto px-12 pages">
             <span>Главная страница / </span>
             <span>Новости</span>
         </div>
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12">
             <div class="news__title">Новости</div>
         </div>
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12">
             <div class="news__boxes">
                 <div class="box">
                     <img src="../assets/image/image 5 (4).png" alt="not found">
@@ -45,10 +45,10 @@
                 </div>
             </div>
         </div>
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12">
             <div class="n-video-title">Видео новости</div>
         </div>
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12">
             <div class="n-video">
                 <div class="video__box">
                     <div class="video__box-img">
@@ -88,15 +88,13 @@
                 </div>
             </div>
         </div>
+        <Footer />
     </div>
 </template>
 
 <script>
 import Navbar from '../components/layout/Navbar.vue'
-import Slide from '../components/Slide.vue'
-import Magazin from '../components/Magazin.vue'
-import Cart from '../components/Cart.vue'
-import Title from '../components/Title.vue'
+import Footer from '../components/layout/Footer.vue'
 
 export default {
   name: 'Home',
@@ -108,10 +106,7 @@ export default {
   },
   components: {
     Navbar,
-    Slide,
-    Magazin,
-    Cart,
-    Title
+    Footer
   }
 }
 </script>
@@ -130,17 +125,22 @@ export default {
     }
     .news__boxes{
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
         padding-bottom: 3rem;
     }
     .news__boxes .box{
         width: 31%;
+        margin: 17px;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
     }
     .news__boxes .box img{
         width: 100%;
         object-fit: cover;
+        cursor: pointer;
+        transition: 0.2s linear;
+    }
+    .news__boxes .box img:hover{
+        transform: scale(1.01);
     }
     .news__boxes .box .box__text{
         padding: 15px 10px 10px 10px;
@@ -167,6 +167,10 @@ export default {
         padding: 10px 15px;
         color: #FCF6F6;
     }
+    .news__boxes .box .box__text .n__date a:hover{
+        box-shadow: unset !important;
+        background: #15626B;
+    }
     .news__boxes .box .box__text .n__date span{
         color: #005964;
     }
@@ -179,6 +183,12 @@ export default {
         display: flex;
         justify-content: space-between;
         padding-bottom: 3rem;
+    }
+    .video1__boxes{
+        width: 45.5% !important;
+    }
+    .video1__boxes .video__box{
+        width: 100% !important;
     }
     .n-video .video__box{
         width: 45%;
@@ -222,6 +232,10 @@ export default {
         border-radius: 5px;
         padding: 10px 15px;
         color: #FCF6F6;
+    }
+    .n-video .video__box a:hover{
+        background: #15626B !important;
+        box-shadow: unset !important;
     }
     .n-video .video__boxes .box{
         display: flex;
@@ -274,7 +288,281 @@ export default {
         padding: 10px 15px;
         color: #FCF6F6;
     }
+    .n-video .video__boxes .box .box__text .n__date a:hover{
+        box-shadow: unset !important;
+        background: #15626B !important;
+    }
     .n-video .video__boxes .box .box__text .n__date span{
         color: #005964;
     }
+
+    @media (max-width: 1025px){
+        .n-video{
+            flex-direction: column;
+        }
+        .n-video .video__box{
+            width: 100% !important;
+        }
+        .n-video .video__boxes .box{
+            flex-direction: column !important;
+        }
+        .n-video .video__boxes .box .box__image{
+            width: auto !important;
+            margin-right: 0 !important;
+        }
+        .n-video .video__boxes .box .box__image img{
+            width: 100% !important;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1025px){
+        .news__boxes .box{
+            width: 32% !important;
+        }
+        .n-video .video__boxes{
+            width: 100% !important;
+            display: flex !important;
+            flex-wrap: wrap !important;
+        }
+        .n-video .video__boxes .box{
+            width: 48% !important;
+            margin: 0 9px !important;
+            min-height: 660px !important;
+        }
+        .n-video .video__boxes .box .box__text{
+            height: 100% !important;
+            padding-top: 10px !important;
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 769px){
+        .news__boxes .box{
+            width: 47% !important;
+            margin: 10px !important;
+        }
+        .n-video .video__boxes{
+            width: 100% !important;
+            display: flex !important;
+            flex-wrap: wrap !important;
+            padding: 1rem 0 !important;
+        }
+        .n-video .video__boxes .box{
+            width: 47% !important;
+            margin: 0 10px !important;
+            min-height: 625px !important;
+        }
+        .n-video .video__boxes .box .box__text{
+            height: 100% !important;
+            padding-top: 10px !important;
+        }
+    }
+
+    @media (min-width: 415px) and (max-width: 600px){
+        .news__boxes .box{
+            width: 48% !important;
+            margin: 5px !important;
+        }
+        .n-video .video__boxes{
+            width: 100% !important;
+            display: flex !important;
+            flex-wrap: wrap !important;
+            padding: 1rem 0 !important;
+        }
+        .n-video .video__boxes .box{
+            width: 47% !important;
+            margin: 0 7px !important;
+            min-height: unset !important;
+            padding-bottom: 1rem !important;
+        }
+        .news__boxes .box .box__text{
+            padding: 5px !important;
+        }
+        .news__boxes .box .box__text .box__title{
+            font-size: 14px !important;
+            margin-bottom: 0.4rem;
+        }
+        .news__boxes .box .box__text p{
+            font-size: 13px !important;
+        }
+        .news__boxes .box .box__text .n__date a{
+            padding: 5px 10px !important;
+            font-size: 13px !important;
+        }
+        .news__boxes .box .box__text .n__date span{
+            font-size: 13px !important;
+        }
+        .news__title{
+            font-size: 32px !important;
+            margin-bottom: 1rem !important;
+        }
+        .n-video-title{
+            font-size: 32px !important;
+            margin-bottom: 1rem !important;
+        }
+        .n-video .video__boxes .box .box__text .text__title{
+            font-size: 14px !important;
+            margin-bottom: 0.4rem !important;
+        }
+        .n-video .video__boxes .box .box__text p{
+            font-size: 13px !important;
+            margin-bottom: 20px !important;
+        }
+        .n-video .video__boxes .box .box__text .n__date a{
+            padding: 5px 10px !important;
+            font-size: 13px !important;
+        }
+        .n-video .video__boxes .box .box__text .n__date span{
+            font-size: 13px !important;
+        }
+        .n-video .video__box .box__title{
+            font-size: 16px !important;
+            margin: 10px 0 0.4rem 0 !important;
+        }
+        .n-video .video__box p{
+            width: 100% !important;
+            font-size: 14px !important;
+            margin-bottom: 0.4rem !important;
+        }
+        .n-video .video__box a{
+            padding: 7px 13px !important;
+            font-size: 14px !important;
+        }
+    }
+
+    @media (max-width: 415px){
+        .pages{
+            padding: 1rem 1.25rem !important;
+        }
+        .news__boxes .box{
+            width: 100% !important;
+            margin: 10px 0 !important;
+        }
+        .news__title{
+            font-size: 32px !important;
+            margin-bottom: 0rem !important;
+        }
+        .n-video-title{
+            font-size: 32px !important;
+            margin-bottom: 0 !important;
+        }
+        .n-video .video__box p{
+            width: 100% !important;
+            margin-bottom: 20px !important;
+            padding-bottom: 0 !important;
+        }
+        .n-video .video__box .box__title{
+            margin: 10px 0 !important;
+        }
+        .n-video .video__box .video__box-img i{
+            padding: 20px !important;
+            font-size: 20px !important;
+        }
+        .n-video .video__boxes .box .box__image i{
+            padding: 20px !important;
+            font-size: 20px !important;
+        }
+        .n-video .video__box{
+            margin: 10px 0 !important;
+        }
+        .n-video .video__boxes{
+            width: 100% !important;
+        }
+        .n-video .video__boxes .box .box__text .text__title{
+            margin-bottom: 0.4rem !important;
+            margin-top: 10px !important;
+        }
+        .n-video .video__boxes .box .box__text p{
+            padding-bottom: 20px !important;
+        }
+        .n-video .video__boxes .box .box__text .n__date a{
+            padding: 7px 15px !important;
+        }
+        .news__boxes .box .box__text .n__date a{
+            padding: 7px 15px !important;
+        }
+    }
+
+    @media (max-width: 300px){
+        .pages{
+            padding: 1rem 1.25rem !important;
+        }
+        .news__boxes .box{
+            width: 100% !important;
+            margin: 10px 0 !important;
+        }
+        .news__title{
+            font-size: 32px !important;
+            margin-bottom: 0rem !important;
+        }
+        .n-video-title{
+            font-size: 32px !important;
+            margin-bottom: 0 !important;
+        }
+        .n-video .video__box p{
+            width: 100% !important;
+            margin-bottom: 20px !important;
+            padding-bottom: 0 !important;
+        }
+        .n-video .video__box .box__title{
+            margin: 10px 0 !important;
+        }
+        .n-video .video__box .video__box-img i{
+            padding: 20px !important;
+            font-size: 20px !important;
+        }
+        .n-video .video__boxes .box .box__image i{
+            padding: 20px !important;
+            font-size: 20px !important;
+        }
+        .n-video .video__box{
+            margin: 10px 0 !important;
+        }
+        .n-video .video__boxes{
+            width: 100% !important;
+        }
+        .n-video .video__boxes .box .box__text .text__title{
+            margin-bottom: 0.4rem !important;
+            margin-top: 10px !important;
+        }
+        .n-video .video__boxes .box .box__text p{
+            padding-bottom: 20px !important;
+        }
+        .n-video .video__boxes .box .box__text .n__date a{
+            padding: 5px 10px !important;
+            font-size: 12px !important;
+        }
+        .news__boxes .box .box__text .n__date a{
+            padding: 5px 10px !important;
+            font-size: 12px !important;
+        }
+        .px-5{
+            padding-left: 5px !important;
+            padding-right: 5px !important;
+        }
+        .news__boxes .box .box__text .box__title{
+            font-size: 15px !important;
+            margin-bottom: 10px !important;
+        }
+        .news__boxes .box .box__text p{
+            font-size: 14px !important;
+            margin-bottom: 10px !important;
+        }
+        .news__boxes .box .box__text .n__date span{
+            font-size: 12px !important;
+        }
+        .n-video .video__box .box__title{
+            font-size: 15px !important;
+        }
+        .n-video .video__box p{
+            font-size: 14px !important;
+        }
+        .n-video .video__box a{
+            padding: 5px 10px !important;
+            font-size: 12px !important;
+        }
+        .n-video .video__boxes .box .box__text .n__date span{
+            font-size: 12px !important;
+        }
+    }
+
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="back">
         <Navbar />
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-12">
             <div class="delivery-menu">
                 <ul>
                     <li>Как сделать заказ</li>
@@ -43,11 +43,13 @@
                 </div>
             </div>
         </div>
+        <Footer />
     </div>
 </template>
 
 <script>
 import Navbar from '../components/layout/Navbar.vue'
+import Footer from '../components/layout/Footer.vue'
 
 export default {
   name: 'Home',
@@ -58,7 +60,8 @@ export default {
 
   },
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 }
 </script>
@@ -99,6 +102,7 @@ export default {
         border-radius: 8px;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
         padding: 3rem;
+        margin-bottom: 5rem;
     }
     .delivery-boxes .delivery__box:first-child{
         width: 55%;
@@ -128,5 +132,72 @@ export default {
         color: #898989;
         font-size: 20px;
         margin-left: 1rem;
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 1025px) {
+        .delivery-menu ul li{
+            font-size: 13px;
+        }
+        .delivery-menu{
+            margin-bottom: 0;
+        }
+    }
+
+    @media only screen and (max-width: 769px){
+        .delivery-menu{
+            display: none;
+        }
+        .delivery-boxes{
+            flex-wrap: wrap;
+        }
+        .delivery-boxes .delivery__box{
+            width: 100% !important;
+        }
+    }
+
+    @media only screen and (min-width: 376px) and (max-width: 600px){
+        .delivery-boxes{
+            padding: 1.5rem;
+        }
+        .delivery-boxes .delivery__box .box_title{
+            font-size: 24px !important;
+            margin-bottom: 0 !important;
+        }
+        .delivery-boxes .delivery__box .d__boxes{
+            padding: 1rem 0 !important;
+        }
+        .delivery-boxes .delivery__box .d__boxes .d__box{
+            width: 100%;
+            padding: 1rem 0;
+        }
+        .delivery-boxes .delivery__box .d__boxes .d__box img{
+            width: 20px;
+        }
+        .delivery-boxes .delivery__box .d__boxes .d__box p{
+            font-size: 14px;
+        }
+    }
+
+    @media only screen and (max-width: 376px) {
+        .delivery-boxes{
+            padding: 1rem;
+        }
+        .delivery-boxes .delivery__box .box_title{
+            font-size: 18px !important;
+            margin-bottom: 0 !important;
+        }
+        .delivery-boxes .delivery__box .d__boxes{
+            padding: 1rem 0 !important;
+        }
+        .delivery-boxes .delivery__box .d__boxes .d__box{
+            width: 100%;
+            padding: 0.5rem 0;
+        }
+        .delivery-boxes .delivery__box .d__boxes .d__box img{
+            width: 20px;
+        }
+        .delivery-boxes .delivery__box .d__boxes .d__box p{
+            font-size: 14px;
+        }
     }
 </style>
