@@ -87,7 +87,7 @@ export default {
 </script>
 <style scoped>
     .footer__back {
-        background: #222F3E;
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #1C55C0 56.03%, #0A3168 99.79%);
     }
     .footer__box {
         display: flex;
@@ -101,7 +101,7 @@ export default {
         color: #D9D9D9;
     }
     .footer__li a:hover {
-        color: #FC7D00;
+        color: #5E8CE2;
     }
     .footer__title h5 {
         font-size: 18px;
@@ -115,7 +115,7 @@ export default {
         color: #FFFFFF;
     }
     .footer__soc a:hover {
-        color: #FC7D00;
+        color: #5E8CE2;
     }
     .footer__logo a {
         font-size: 24px;

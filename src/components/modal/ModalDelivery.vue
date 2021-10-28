@@ -93,8 +93,8 @@ export default {
     }
     .active {
         background: #ffffff;
-        color: #C211A7;
-        border: 1px solid #C211A7;
+        color: #0052FF;
+        border: 1px solid #5E8CE2;
         box-sizing: border-box;
         border-radius: 8px;
     }
@@ -106,7 +106,7 @@ export default {
         color: #000000;
     }
     .delivery__pick {
-        background: #C211A7;
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #377AF9 86.59%, #2267C7 99.79%);
         border-radius: 8px;
         font-weight: 600;
         font-size: 18px;

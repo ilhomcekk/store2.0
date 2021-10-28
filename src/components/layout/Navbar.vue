@@ -136,7 +136,7 @@ export default {
 </script>
 <style scoped>
     .navbar__back {
-        background: #222F3E;
+        background: linear-gradient(270.08deg, #003AA8 0.04%, #022C7F 47.91%, #051E53 99.93%);
     }
     .navbar__text a {
         font-size: 14px;
@@ -206,13 +206,13 @@ export default {
         background: #ffffff;
         z-index: 9999;
         right: 0;
-        margin-top: -20px;
+        margin-top: 0px;
     }
     .profile__header {
         display: flex;
         flex-direction: row;
-        background: #222F3E;
-        padding: 30px 15px 10px 15px;
+        background: linear-gradient(270.08deg, #074BCE 0.04%, #022C7F 47.91%, #00329D 99.93%);
+        padding: 10px 15px 10px 15px;
     }
     .profile__title {
         font-weight: normal;
@@ -241,7 +241,7 @@ export default {
         color: #565656;
     }
     .profile__item a:hover {
-        color: #FC7D00;
+        color: #274784;
     }
     .profile__item a i {
         margin-right: 5px;

@@ -5,14 +5,14 @@
 </template>
 <script>
 export default {
-    
+
 }
 </script>
 <style scoped>
     .brand__name {
         font-size: 48px;
         line-height: 56px;
-        color: #058490;
+        color: #023047;
         margin-bottom: 20px;
     }
 </style>

@@ -40,10 +40,6 @@
 
 <script>
 import Navbar from '../components/layout/Navbar.vue'
-import Slide from '../components/Slide.vue'
-import Magazin from '../components/Magazin.vue'
-import Cart from '../components/Cart.vue'
-import Title from '../components/Title.vue'
 
 export default {
   name: 'Home',
@@ -54,11 +50,7 @@ export default {
 
   },
   components: {
-    Navbar,
-    Slide,
-    Magazin,
-    Cart,
-    Title
+    Navbar
   }
 }
 </script>

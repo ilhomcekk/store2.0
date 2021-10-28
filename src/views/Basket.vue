@@ -83,7 +83,7 @@ export default {
         font-weight: 600;
         font-size: 48px;
         line-height: 130%;
-        color: #005964;
+        color: #023047;
     }
     .basket__delivery {
         padding: 39px 20px;
@@ -101,7 +101,7 @@ export default {
         font-weight: normal;
         font-size: 14px;
         line-height: 100%;
-        color: #C211A7;
+        color: #0052FF;
     }
     .basket__spec {
         background: #FFFFFF;

@@ -58,7 +58,7 @@ export default {
         font-weight: bold;
         font-size: 40px;
         line-height: 100%;
-        color: #C211A7;
+        color: #0052FF;
     }
     .total__left {
         font-weight: normal;
@@ -77,7 +77,7 @@ export default {
         font-size: 14px;
         line-height: 100%;
         text-align: right;
-        color: #C211A7;
+        color: #0052FF;
         margin-left: 10px;
     }
     .total__button {
@@ -87,8 +87,7 @@ export default {
         text-align: center;
         color: #FCF6F6;
         width: 100%;
-        background: linear-gradient(281.2deg, #15626B 8.26%, #1B7F8C 94.42%);
-        border: 1.16px solid #005964;
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #384F81 -2.67%, #49679F 56.03%, #729EDB 99.79%);
         box-sizing: border-box;
         box-shadow: 0px 2.32px 11.6px rgba(0, 0, 0, 0.25);
         border-radius: 5.8px;

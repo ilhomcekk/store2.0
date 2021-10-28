@@ -78,11 +78,11 @@ export default {
         background-color: #E5E5E5;
     }
     .show__all {
-        background: #222F3E;
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #377AF9 86.59%, #2267C7 99.79%);
         border-radius: 8px;
         font-size: 18px;
         line-height: 100%;
         color: #FFFFFF;
-        padding: 10px 20px;
+        padding: 12px 80px;
     }
 </style>

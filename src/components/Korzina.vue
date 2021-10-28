@@ -81,13 +81,13 @@ export default {
         margin-top: 15px;
         font-size: 14px;
         line-height: 100%;
-        color: #C211A7;
+        color: #0052FF;
     }
     .basket__price h3 {
         font-weight: bold;
         font-size: 40px;
         line-height: 100%;
-        color: #C211A7;
+        color: #0052FF;
     }
     .basket__price {
         text-align: right;

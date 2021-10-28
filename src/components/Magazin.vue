@@ -98,7 +98,7 @@ export default {
     .brand__name {
         font-size: 48px;
         line-height: 56px;
-        color: #058490;
+        color: #023047;
         margin-left: 25px;
         margin-bottom: 20px;
     }

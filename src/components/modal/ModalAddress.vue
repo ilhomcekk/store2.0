@@ -87,7 +87,7 @@ export default {
         font-size: 26px;
     }
     .active {
-        border: 1px solid #C211A7;
-        color: #C211A7;
+        border: 1px solid #5E8CE2;
+        color: #0052FF;
     }
 </style>

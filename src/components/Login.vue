@@ -47,13 +47,13 @@ export default {
         color: #000000;
     }
     .login__title button {
-        border: 1px solid #C211A7;
+        border: 1px solid #5E8CE2;
         box-sizing: border-box;
         border-radius: 15px;
         font-weight: normal;
         font-size: 13px;
         line-height: 100%;
-        color: #C211A7;
+        color: #0052FF;
         padding: 8px 12px;
     }
     .login__box {
@@ -67,12 +67,12 @@ export default {
         background: #FFFFFF;
         border-radius: 4.9px;
         height: 40px;
-        border: 1.5px solid #058490;
+        border: 1.5px solid #5E8CE2;
         width: 100%;
         padding: 0 10px;
     }
     .login__item input:focus {
-        border: 1.5px solid #004e55;
+        border: 1.5px solid #456fbe;
         outline: none !important;
     }
     .login__item h5 {
