@@ -2,10 +2,10 @@
     <div class="back">
         <Navbar />
         <div class="container mx-auto px-12 pages">
-            <span>Главная страница / </span>
-            <span>Мужчинам / </span>
-            <span>Одежда / </span>
-            <span>Свитшоты </span>
+            <a href="#">Главная страница / </a>
+            <a href="#">Мужчинам / </a>
+            <a href="#">Одежда / </a>
+            <a href="#">Свитшоты </a>
         </div>
         <div class="container mx-auto px-12">
             <div class="filter__title">Мужские свитшоты</div>
