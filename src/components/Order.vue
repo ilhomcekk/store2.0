@@ -40,4 +40,42 @@ export default {
         text-align: center;
         margin: 0 auto;
     }
+
+    @media (min-width: 769px) and (max-width: 1025px){
+        table tr td img{
+            width: 90px;
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 769px){
+        table tr td img{
+            width: 80px;
+        }
+    }
+
+    @media (min-width: 415px) and (max-width: 600px){
+        table tr td{
+            font-size: 16px !important;
+        }
+        table tr td img{
+            width: 70px;
+        }
+    }
+
+    @media (max-width: 415px){
+        table tr td{
+            font-size: 12px !important;
+            padding: 1rem 0;
+        }
+        table tr td img{
+            width: 50px;
+        }
+    }
+
+    @media (max-width: 300px){
+        table tr td img{
+            width: 35px;
+        }
+    }
+
 </style>

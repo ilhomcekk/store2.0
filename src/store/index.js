@@ -9,7 +9,7 @@ export default new Vuex.Store({
       {
         id: 1,
         img: 'https://firebasestorage.googleapis.com/v0/b/crm-react-school.appspot.com/o/boy-1031527_1920%201.png?alt=media&token=1ace5d38-3a17-4475-9cab-91ec5df67782',
-        price: '1400  ₽',
+        price: 1400,
         discount: 21,
         oldprice: null,
         name: 'Элегантный Костюм с брюками ZARA стиль',
@@ -18,7 +18,7 @@ export default new Vuex.Store({
         cut: 'средняя посадка',
         info: 'Информация о технических характеристиках, комплекте поставки,стране изготовления и внешнем виде товара носит справочный характер и основывается на последних доступных сведениях от продавца',
         category: 'Костюмы1',
-        brand: 'Zara',
+        brand: 'HM',
         comments: {
           id1: {
             name: 'Турсунов Асрор',
@@ -49,7 +49,7 @@ export default new Vuex.Store({
       {
         id: 2,
         img: 'https://firebasestorage.googleapis.com/v0/b/crm-react-school.appspot.com/o/boy-1031527_1920%201.png?alt=media&token=1ace5d38-3a17-4475-9cab-91ec5df67782',
-        price: '1400  ₽',
+        price: 7000,
         discount: 21,
         oldprice: null,
         name: 'Элегантный Костюм с брюками ZARA стиль',
@@ -58,7 +58,7 @@ export default new Vuex.Store({
         cut: 'средняя посадка',
         info: 'Информация о технических характеристиках, комплекте поставки,стране изготовления и внешнем виде товара носит справочный характер и основывается на последних доступных сведениях от продавца',
         category: 'Костюмы',
-        brand: 'Zara',
+        brand: 'Adidas',
         comments: {
           id1: {
             name: 'Турсунов Асрор',
@@ -89,7 +89,7 @@ export default new Vuex.Store({
       {
         id: 3,
         img: 'https://firebasestorage.googleapis.com/v0/b/crm-react-school.appspot.com/o/11175-4%201.png?alt=media&token=e706283a-024a-430b-8538-b4f6b034cbe3',
-        price: '1400  ₽',
+        price: 9000,
         discount: 21,
         oldprice: null,
         name: 'Элегантный Костюм с брюками ZARA стиль',
@@ -98,7 +98,7 @@ export default new Vuex.Store({
         cut: 'средняя посадка',
         info: 'Информация о технических характеристиках, комплекте поставки,стране изготовления и внешнем виде товара носит справочный характер и основывается на последних доступных сведениях от продавца',
         category: 'Костюмы',
-        brand: 'Zara',
+        brand: 'NCS',
         comments: {
           id1: {
             name: 'Турсунов Асрор',
@@ -129,7 +129,7 @@ export default new Vuex.Store({
       {
         id: 4,
         img: 'https://firebasestorage.googleapis.com/v0/b/crm-react-school.appspot.com/o/11175-4%201.png?alt=media&token=e706283a-024a-430b-8538-b4f6b034cbe3',
-        price: '1400  ₽',
+        price: 4000,
         discount: 21,
         oldprice: null,
         name: 'Элегантный Костюм с брюками ZARA стиль',
@@ -138,7 +138,7 @@ export default new Vuex.Store({
         cut: 'средняя посадка',
         info: 'Информация о технических характеристиках, комплекте поставки,стране изготовления и внешнем виде товара носит справочный характер и основывается на последних доступных сведениях от продавца',
         category: 'Костюмы',
-        brand: 'Zara',
+        brand: 'Climber',
         comments: {
           id1: {
             name: 'Турсунов Асрор',
@@ -169,7 +169,7 @@ export default new Vuex.Store({
       {
         id: 5,
         img: 'https://firebasestorage.googleapis.com/v0/b/crm-react-school.appspot.com/o/11175-4%201.png?alt=media&token=e706283a-024a-430b-8538-b4f6b034cbe3',
-        price: '1400  ₽',
+        price: 400,
         discount: 21,
         oldprice: null,
         name: 'Элегантный Костюм с брюками ZARA стиль',
@@ -178,7 +178,7 @@ export default new Vuex.Store({
         cut: 'средняя посадка',
         info: 'Информация о технических характеристиках, комплекте поставки,стране изготовления и внешнем виде товара носит справочный характер и основывается на последних доступных сведениях от продавца',
         category: 'Костюмы',
-        brand: 'Zara',
+        brand: 'Just',
         comments: {
           id1: {
             name: 'Турсунов Асрор',
@@ -209,7 +209,7 @@ export default new Vuex.Store({
       {
         id: 6,
         img: 'https://firebasestorage.googleapis.com/v0/b/crm-react-school.appspot.com/o/boy-1031527_1920%201.png?alt=media&token=1ace5d38-3a17-4475-9cab-91ec5df67782',
-        price: '1400  ₽',
+        price: 1400,
         discount: 21,
         oldprice: '2000 рубл',
         name: 'Элегантный Костюм с брюками ZARA стиль',
@@ -218,7 +218,7 @@ export default new Vuex.Store({
         cut: 'средняя посадка',
         info: 'Информация о технических характеристиках, комплекте поставки,стране изготовления и внешнем виде товара носит справочный характер и основывается на последних доступных сведениях от продавца',
         category: 'Костюмы',
-        brand: 'Zara',
+        brand: 'Terra Pro',
         comments: {
           id1: {
             name: 'Турсунов Асрор',
@@ -249,7 +249,7 @@ export default new Vuex.Store({
       {
         id: 7,
         img: 'https://firebasestorage.googleapis.com/v0/b/crm-react-school.appspot.com/o/boy-1031527_1920%201.png?alt=media&token=1ace5d38-3a17-4475-9cab-91ec5df67782',
-        price: '1400  ₽',
+        price: 1400,
         discount: 21,
         oldprice: '2000 рубл',
         name: 'Элегантный Костюм с брюками ZARA стиль',
@@ -258,7 +258,7 @@ export default new Vuex.Store({
         cut: 'средняя посадка',
         info: 'Информация о технических характеристиках, комплекте поставки,стране изготовления и внешнем виде товара носит справочный характер и основывается на последних доступных сведениях от продавца',
         category: 'Костюмы',
-        brand: 'Zara',
+        brand: 'Gucci',
         comments: {
           id1: {
             name: 'Турсунов Асрор',
@@ -289,7 +289,7 @@ export default new Vuex.Store({
       {
         id: 8,
         img: 'https://firebasestorage.googleapis.com/v0/b/crm-react-school.appspot.com/o/boy-1031527_1920%201.png?alt=media&token=1ace5d38-3a17-4475-9cab-91ec5df67782',
-        price: '1400  ₽',
+        price: 1400,
         discount: 21,
         oldprice: '2000 рубл',
         name: 'Элегантный Костюм с брюками ZARA стиль',
@@ -298,7 +298,7 @@ export default new Vuex.Store({
         cut: 'средняя посадка',
         info: 'Информация о технических характеристиках, комплекте поставки,стране изготовления и внешнем виде товара носит справочный характер и основывается на последних доступных сведениях от продавца',
         category: 'Костюмы',
-        brand: 'Zara',
+        brand: 'US Polo',
         comments: {
           id1: {
             name: 'Турсунов Асрор',
@@ -329,7 +329,7 @@ export default new Vuex.Store({
       {
         id: 9,
         img: 'https://firebasestorage.googleapis.com/v0/b/crm-react-school.appspot.com/o/boy-1031527_1920%201.png?alt=media&token=1ace5d38-3a17-4475-9cab-91ec5df67782',
-        price: '1400  ₽',
+        price: 1400,
         discount: 21,
         oldprice: '2000 рубл',
         name: 'Элегантный Костюм с брюками ZARA стиль',
@@ -369,7 +369,7 @@ export default new Vuex.Store({
       {
         id: 10,
         img: 'https://firebasestorage.googleapis.com/v0/b/crm-react-school.appspot.com/o/boy-1031527_1920%201.png?alt=media&token=1ace5d38-3a17-4475-9cab-91ec5df67782',
-        price: '1400  ₽',
+        price: 1400,
         discount: 21,
         oldprice: '2000 рубл',
         name: 'Элегантный Костюм с брюками ZARA стиль',
@@ -409,7 +409,7 @@ export default new Vuex.Store({
       {
         id: 11,
         img: 'https://firebasestorage.googleapis.com/v0/b/crm-react-school.appspot.com/o/boy-1031527_1920%201.png?alt=media&token=1ace5d38-3a17-4475-9cab-91ec5df67782',
-        price: '1400  ₽',
+        price: 1400,
         discount: 21,
         oldprice: '2000 рубл',
         name: 'Элегантный Костюм с брюками ZARA стиль',
@@ -449,7 +449,7 @@ export default new Vuex.Store({
       {
         id: 12,
         img: 'https://firebasestorage.googleapis.com/v0/b/crm-react-school.appspot.com/o/11175-4%201.png?alt=media&token=e706283a-024a-430b-8538-b4f6b034cbe3',
-        price: '1400  ₽',
+        price: 1400,
         discount: 21,
         oldprice: '2000 рубл',
         name: 'Элегантный Костюм с брюками ZARA стиль',
@@ -489,7 +489,7 @@ export default new Vuex.Store({
       {
         id: 13,
         img: 'https://firebasestorage.googleapis.com/v0/b/crm-react-school.appspot.com/o/11175-4%201.png?alt=media&token=e706283a-024a-430b-8538-b4f6b034cbe3',
-        price: '1400  ₽',
+        price: 1400,
         discount: 21,
         oldprice: '2000 рубл',
         name: 'Элегантный Костюм с брюками ZARA стиль',
@@ -529,7 +529,7 @@ export default new Vuex.Store({
       {
         id: 14,
         img: 'https://firebasestorage.googleapis.com/v0/b/crm-react-school.appspot.com/o/11175-4%201.png?alt=media&token=e706283a-024a-430b-8538-b4f6b034cbe3',
-        price: '1400  ₽',
+        price: 1400,
         discount: 21,
         oldprice: '2000 рубл',
         name: 'Элегантный Костюм с брюками ZARA стиль',
@@ -569,7 +569,7 @@ export default new Vuex.Store({
       {
         id: 15,
         img: 'https://firebasestorage.googleapis.com/v0/b/crm-react-school.appspot.com/o/11175-4%201.png?alt=media&token=e706283a-024a-430b-8538-b4f6b034cbe3',
-        price: '1400  ₽',
+        price: 1400,
         discount: 21,
         oldprice: '2000 рубл',
         name: 'Элегантный Костюм с брюками ZARA стиль',

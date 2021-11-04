@@ -16,6 +16,7 @@ import Payments from '../views/Payments.vue'
 import Questions from '../views/Questions.vue'
 import Requisites from '../views/Requisites.vue'
 import ReturnProduct from '../views/ReturnProduct.vue'
+import DeliveryCart from '../views/DeliveryCart.vue'
 
 Vue.use(VueRouter)
 
@@ -26,7 +27,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/add',
+    path: '/add/:id',
     name: 'Add',
     component: Add
   },
@@ -96,6 +97,11 @@ const routes = [
     component: Requisites
   },
   {
+    path: '/deliverycart',
+    name: 'DeliveryCart',
+    component: DeliveryCart
+  },
+  {
     path: '/returnproduct',
     name: 'ReturnProduct',
     component: ReturnProduct
@@ -104,6 +110,12 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
+  scrollBehavior () {
+    return {
+      x: 0,
+      y: 0
+    }
+  },
   base: process.env.BASE_URL,
   routes,
   linkExactActiveClass: 'router-link-exact-active'

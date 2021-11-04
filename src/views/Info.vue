@@ -75,26 +75,6 @@ export default {
 </script>
 
 <style scoped>
-    .info__menu{
-        padding: 1.5rem 0;
-        margin-bottom: 1.5rem;
-    }
-    .info__menu ul{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .info__menu ul a{
-        color: #F8F8FA;
-        display: flex;
-        align-items: center;
-    }
-    .info__menu ul a:first-child{
-        color: #C211A7;
-    }
-    .info__menu ul a img{
-        margin-right: 1rem;
-    }
     .info__boxes{
         display: flex;
         justify-content: space-around;
@@ -143,9 +123,6 @@ export default {
     .info__boxes .box .b__user .phone span{
         color: #2C2C2C;
     }
-    .info__boxes .box .b__user #back{
-        color: #C211A7;
-    }
     .info__boxes .box .delivery{
         display: flex;
         align-items: center;
@@ -166,7 +143,7 @@ export default {
         font-weight: bold;
     }
     .info__boxes .box:nth-child(2){
-        background: #FFECF5;
+        background: rgba(0, 82, 255, 0.2);
     }
     .info__boxes .box:nth-child(2) p{
         color: #2C2C2C;
@@ -186,7 +163,7 @@ export default {
         width: 100px;
         background: #FFF;
         margin-right: 1rem;
-        color: #C211A7;
+        color: #0052FF;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
         display: flex;
         align-items: center;
@@ -210,7 +187,7 @@ export default {
         width: 23%;
     }
     .info__boxes2 .box:first-child{
-        background: #FFECF5;
+        background: rgba(0, 82, 255, 0.2);
     }
     .info__boxes2 .box .box__title{
         font-size: 23px;
@@ -225,4 +202,168 @@ export default {
     .info__boxes2 .box p img{
         margin-right: 10px;
     }
+
+    @media (max-width: 1025px){
+        .info__boxes{
+            flex-direction: column;
+        }
+        .info__boxes .box{
+            width: 100%;
+        }
+        .info__boxes2{
+            margin: 2rem 0 0;
+            flex-wrap: wrap;
+        }
+        .info__boxes2 .box{
+            width: 48%;
+            margin: 10px 0;
+        }
+    }
+
+    @media (min-width: 415px) and (max-width: 600px) {
+        .info__boxes .box{
+            padding: 1.2rem;
+            height: 220px;
+            margin: 10px 0;
+        }
+        .info__boxes2 .box .box__title{
+            font-size: 18px;
+            line-height: 18px;
+        }
+        .info__boxes .box .user{
+            margin-bottom: 10px;
+        }
+        .info__boxes2{
+            margin: 0;
+        }
+        .info__boxes2 .box{
+            padding: 1.2rem;
+            height: 110px;
+        }
+    }
+
+    @media (max-width: 415px) {
+        .px-12{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .info__boxes .box{
+            padding: 1.2rem;
+            height: 220px;
+            margin: 10px 0;
+        }
+        .info__boxes2 .box .box__title{
+            font-size: 18px;
+            line-height: 18px;
+        }
+        .info__boxes .box .user{
+            margin-bottom: 10px;
+        }
+        .info__boxes .box .user .user__name{
+            font-size: 20px;
+            line-height: 20px;
+        }
+        .info__boxes .box .delivery .delivery__title{
+            font-size: 20px;
+            line-height: 20px;
+        }
+        .info__boxes2{
+            margin: 0;
+        }
+        .info__boxes2 .box{
+            width: 100%;
+            padding: 1.2rem;
+            height: 110px;
+        }
+    }
+
+    @media (max-width: 376px){
+        .info__boxes .box .email{
+            font-size: 14px;
+        }
+        .info__boxes .box .b__user .phone{
+            font-size: 14px;
+        }
+        .info__boxes .box .b__user #back{
+            font-size: 14px;
+        }
+        .info__boxes .box .user img{
+            width: 80px;
+            margin-bottom: 0.5rem;
+        }
+        .info__boxes .box .user .user__name{
+            font-size: 18px;
+            line-height: 18px;
+        }
+        .info__boxes .box{
+            height: 180px;
+        }
+        .info__boxes .box .delivery .delivery__title{
+            font-size: 18px;
+            line-height: 18px;
+        }
+        .info__boxes .box .delivery img{
+            width: 80px;
+            height: 80px;
+        }
+        .info__boxes .box:nth-child(3) .delivery .discount{
+            width: 80px;
+            height: 80px;
+            font-size: 36px;
+        }
+        .info__boxes .box:nth-child(2) p{
+            font-size: 14px;
+        }
+        .info__boxes .box:nth-child(3) p{
+            font-size: 14px;
+        }
+        .info__boxes2 .box .box__title{
+            font-size: 16px;
+            line-height: 16px;
+        }
+        .info__boxes2 .box p{
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 300px){
+        .px-12{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .info__boxes .box{
+            height: auto;
+            padding: 10px;
+        }
+        .info__boxes .box .user{
+            flex-direction: column;
+        }
+        .info__boxes .box .delivery{
+            flex-direction: column;
+        }
+        .info__boxes .box .delivery img{
+            margin-bottom: 10px;
+        }
+        .info__boxes .box:nth-child(3) .delivery .discount{
+            margin-bottom: 10px;
+        }
+        .info__boxes2 .box{
+            height: 75px;
+        }
+        .info__boxes2 .box{
+            padding: 10px;
+        }
+        .info__boxes .box .email{
+            display: flex;
+            flex-direction: column;
+        }
+        .info__boxes .box .b__user{
+            align-items: flex-end;
+        }
+        .info__boxes .box .b__user .phone{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
 </style>

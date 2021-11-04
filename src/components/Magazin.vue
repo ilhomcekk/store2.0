@@ -105,4 +105,119 @@ export default {
     .brand__one img {
         height: 210px;
     }
+
+    @media (max-width: 1025px){
+        .brand__name{
+            margin-left: 0;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1025px) {
+        .brand__one{
+            width: 95%;
+        }
+        .brand__box{
+            padding: 0;
+            margin: 0;
+        }
+        .brand__second img{
+            height: 48%;
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 769px){
+        .brand__images{
+            flex-wrap: wrap;
+        }
+        .brand__one{
+            width: 100%;
+        }
+        .brand__one img{
+            width: 100%;
+        }
+        .brand__box{
+            height: auto;
+            padding: 5px;
+            margin: 0;
+        }
+        .brand__second{
+            width: 100%;
+            display: flex !important;
+            flex-direction: inherit;
+        }
+        .brand__second img{
+            width: 50%;
+        }
+        .gap{
+            gap: 10px;
+        }
+    }
+
+    @media (min-width: 415px) and (max-width: 600px){
+        .brand__name{
+            font-size: 32px;
+        }
+        .grid-cols-9{
+            grid-template-columns: repeat(3, minmax(0, 1fr));;
+        }
+        .gap-4{
+            margin: 0;
+        }
+        .brand__box{
+            margin: 0;
+        }
+        .brand__one{
+            width: 55%;
+        }
+        .brand__one img{
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 415px){
+        .px-12{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .mt-16{
+            margin-top: 1rem;
+        }
+        .brand__name{
+            font-size: 24px;
+            line-height: 24px;
+        }
+        .grid-cols-9{
+            grid-template-columns: repeat(3, minmax(0, 1fr));;
+        }
+        .gap-4{
+            margin: 0;
+        }
+        .brand__box{
+            margin: 0;
+            padding: 5px;
+            height: auto;
+            min-height: auto;
+        }
+        .brand__one{
+            width: auto;
+        }
+        .brand__one img{
+            width: auto;
+            height: 198px;
+        }
+        .brand__second a{
+            height: auto;
+        }
+        .brand__second a img{
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    @media (max-width: 300px){
+        .brand__one img{
+            height: 158px;
+        }
+    }
+
 </style>

@@ -88,10 +88,10 @@ export default {
         color: #023047;
     }
     .order-menu ul a:nth-child(3){
-        color: #C211A7;
+        color: #0052FF;
     }
     .order-menu ul a:hover{
-        color: #C211A7;
+        color: #0052FF;
     }
     .border-bottom{
         border-bottom: 2px solid #898989;
@@ -100,7 +100,7 @@ export default {
     }
     .r-product__title{
         font-size: 42px;
-        color: #005964;
+        color: #023047;
         margin-bottom: 2rem;
     }
     .r-product .product__title{
@@ -124,13 +124,13 @@ export default {
         align-items: center;
         width: 100%;
         padding: 0px 1rem 0px 1.5rem;
-        background: #FFECF5;
+        background: rgba(0, 82, 255, 0.15);
         border-radius: 8px;
         margin: 2rem 0 1rem 0;
     }
     .r-product .warning span{
         border-radius: 50%;
-        background: #C211A7;
+        background: #0052FF;
         width: 35px;
         height: 35px;
         color: #FFF;

@@ -17,11 +17,9 @@
                         <div class="price__title">Диапазон цена</div>
                         <i class="fa fa-chevron-up"></i>
                     </div>
-                    <div class="price__inputs">
-                        <input type="number" placeholder="5 000 ₽"/>
-                        <input type="number" placeholder="10 000 ₽"/>
+                    <div class="price__range1">
+                        <price-range @minValue="minValue" @maxValue="maxValue" />
                     </div>
-                    <input type="range" class="price__range">
                     <div class="brand">
                         <div class="brand__title">Бренд</div>
                         <i class="fa fa-chevron-up"></i>
@@ -152,7 +150,7 @@
                             <p>лето (62)</p>
                         </div>
                     </form>
-                    <button type="submit" class="filter">Фильтр</button>
+                    <button type="submit" @click="check()" class="filter">Фильтр</button>
                     <button type="submit" class="reset">Сбросить</button>
                 </div>
                 <div class="all__products">
@@ -166,7 +164,7 @@
                     </div>
                     <div class="products">
                         <div class="grid grid-cols-4 gap-4">
-                            <div v-for="cart in carts" :key="cart.id">
+                            <div v-for="cart in filterProducts" :key="cart.id">
                                 <Cart :cart="cart" />
                             </div>
                         </div>
@@ -180,26 +178,63 @@
 <script>
 import Navbar from '../components/layout/Navbar.vue'
 import Cart from '../components/Cart.vue'
+import PriceRange from '../components/PriceRange.vue'
+import _ from 'lodash'
 
 export default {
   name: 'Home',
   data: () => ({
+    sortedProducts: [],
+    min: 50,
+    max: 10000
 
   }),
-  methods: {
+  mounted () {
 
   },
   computed: {
     carts () {
       return this.$store.getters.CARTS
+    },
+    filterProducts () {
+      return this.filterProductsByRange(this.carts)
+    },
+    all () {
+      return this.carts
+    },
+    uniqProducts () {
+      return _.uniqBy(this.carts, 'property')
+    }
+  },
+  methods: {
+    minValue (value) {
+      this.min = value
+    },
+    maxValue (value) {
+      this.max = value
+    },
+    filterProductsByRange (products) {
+      var self = this
+      return products.filter(product => (product.price >= self.min && product.price <= self.max) ? product : '')
+    },
+    filterProductsByCategory: function (products) {
+      return products.filter(product => !product.category.indexOf(this.category))
+    },
+    filterProductsByName: function (products) {
+      return products.filter(product => !product.name.indexOf(this.name))
+    },
+    check () {
+      console.log(this.min)
     }
   },
   components: {
     Navbar,
-    Cart
+    Cart,
+    PriceRange
   }
 }
-</script>
+</script>,
+    PriceRange
 
 <style scoped>
     .pages{

@@ -98,15 +98,15 @@ export default {
         color: #023047;
     }
     .order-menu ul a:nth-child(3){
-        color: #C211A7;
+        color: #0052FF;
     }
     .order-menu ul a:hover{
-        color: #C211A7;
+        color: #0052FF;
     }
     .requisites .requisites__title{
         font-size: 42px;
         margin-bottom: 2rem;
-        color: #005964;
+        color: #023047;
     }
     .requisites .text{
         display: flex;
@@ -155,6 +155,10 @@ export default {
     }
 
     @media only screen and (min-width: 376px) and (max-width: 600px){
+        .px-12{
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
         .requisites .requisites__title{
             font-size: 32px;
             margin-bottom: 1rem;
@@ -173,6 +177,10 @@ export default {
         }
     }
     @media only screen and (max-width: 376px){
+        .px-12{
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
         .requisites .requisites__title{
             font-size: 32px;
             margin-bottom: 1rem;

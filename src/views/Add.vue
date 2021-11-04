@@ -2,11 +2,7 @@
     <div class="">
         <Navbar />
         <div class="add-product">
-            <div class="container mx-auto px-12">
-                <span>Главная страница / </span>
-                <span>Рубашки / </span>
-                <span>Базовая рубашка </span>
-            </div>
+            <location-navbar :name="'Базовая рубашка'" />
             <div class="container mx-auto px-12">
                 <h1>Базовая рубашка</h1>
                 <div class="product-action">
@@ -44,12 +40,10 @@
                         </div>
                         <div class="product__size-title">Размер</div>
                         <div class="product__size">
-                            <span>42</span>
-                            <span>46</span>
-                            <span>48</span>
-                            <span>50</span>
-                            <span>52</span>
-                            <span>54</span>
+                            <div class="radioContainer" v-for="(size, index) in sizes" :key="index">
+                                <input type="radio" :id="index" v-bind:value="size" v-model="picked" @click="temp(size)">
+                                <label class="circle" :for="index">{{ size }}</label>
+                            </div>
                         </div>
                         <div class="payment">
                             Цена при оплате:
@@ -62,9 +56,8 @@
                         <div class="product__buttons">
                             <div>
                                 <button type="submit" id="korzina__button">В корзину</button>
-                                <i class="fa fa-heart"></i>
+                                <i class="far fa-heart"></i>
                             </div>
-                            <button type="submit" id="sale">Купить</button>
                         </div>
                     </div>
                 </div>
@@ -219,7 +212,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="c__box"></div>
+                    <div class="c__box">
+                        <div class="box__title">Оставьте ваш отзыв</div>
+                        <input type="text" placeholder="Ваше имя" />
+                        <input type="email" placeholder="Ваш  e-mail" />
+                        <textarea placeholder="Ваш отзыв"></textarea>
+                        <button type="submit">Отправить отзыв</button>
+                    </div>
                 </div>
             </div>
             <!-- last -->
@@ -240,6 +239,7 @@
 
 <script>
 import Navbar from '../components/layout/Navbar.vue'
+import LocationNavbar from '../components/layout/LocationNavbar.vue'
 import Cart from '../components/Cart.vue'
 import Footer from '../components/layout/Footer.vue'
 import Counter from '../components/Counter.vue'
@@ -250,8 +250,12 @@ import ProgressLine from '../components/progress/ProgressLine.vue'
 export default {
   name: 'Home',
   data: () => ({
-    prot: 80
+    prot: 80,
+    sizes: [42, 46, 48, 50, 52, 54]
   }),
+  async mounted() {
+    const id = this.$route.params.id
+  },
   methods: {
 
   },
@@ -267,14 +271,22 @@ export default {
     Counter,
     StarRating,
     Progress,
-    ProgressLine
+    ProgressLine,
+    LocationNavbar
   }
 }
 
 </script>
 <style>
     .back {
-        background-color: #E5E5E5;
+        background-color: #fff;
+    }
+    .pages a{
+        color: #023047;
+        text-decoration: none;
+    }
+    .pages a:hover{
+        color: #023999;
     }
     .stars span {
         margin-right: 5px !important;
@@ -284,4 +296,184 @@ export default {
         width: 75%;
         margin-left: 15px;
     }
+    .add-product .product__information .brend{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0;
+    }
+    .add-product .product__information .brend a{
+        margin: 0.2rem 0;
+        margin-right: 0.5rem !important;
+        text-decoration: none;
+    }
+    .add-product .product__information .product__about .product__price{
+        color: #0052FF;
+    }
+    .add-product .product__information .product__buttons #korzina__button{
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #377AF9 86.59%, #2267C7 99.79%);
+        transition: 0.3s linear;
+    }
+    .add-product .product__information .product__buttons #korzina__button:hover{
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #2267C7 86.59%, #377AF9 99.79%);
+    }
+    .product-list .product__img .image{
+        height: 458px !important;
+        position: relative;
+    }
+    .product-list .product__img .image .far.fa-heart{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: #FC7D00;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .add-product .product-list .product__img .images{
+        justify-content: unset !important;
+    }
+    .add-product .product-list .product__img .images img{
+        margin-top: 8px;
+    }
+    .q__comments a{
+        margin-left: auto;
+        border-bottom: 1px solid #898989;
+        color: #898989;
+    }
+    .q__comments a:hover{
+        opacity: 0.7;
+    }
+    .question .q__box .box{
+        background: rgba(0, 82, 255, 0.2);
+    }
+    .q__comments span:first-child{
+        border-bottom: 2px solid #0052FF !important;
+    }
+    .p-customer > span{
+        margin-right: 2rem !important;
+    }
+    .p-customer > span:nth-child(2){
+        border-bottom: 1px solid #0052FF;
+    }
+    .p-customer span:nth-child(2) i{
+        color: #0052FF;
+    }
+    .p-customer .customer .c__box .user__comment .date__sale{
+        display: flex !important;
+    }
+    .p-customer .customer .c__box .user__comment .date__sale .date{
+        font-size: 14px !important;
+        color: #999999;
+    }
+    .p-customer .customer .c__box .user__comment .date__sale .saled{
+        display: flex !important;
+        padding-left: 12rem;
+    }
+    .p-customer .customer .c__box .user__comment .date__sale .saled img{
+        object-fit: scale-down;
+        margin-right: 5px !important;
+    }
+    .p-customer .customer .c__box .user__comment .date__sale .saled .p__saled{
+        color: #999999;
+    }
+    .customer .user__comment{
+        margin: 1.5rem 0;
+    }
+    .customer .user__comment .user .user__name{
+        font-size: 19px;
+    }
+    .customer .user__comment p{
+        font-size: 16px;
+    }
+    .p__saled{
+        font-size: 14px;
+    }
+    .c__box:first-child{
+        padding-bottom: 3rem;
+    }
+    .customer .user__comment .user .stars{
+        margin-left: 0 !important;
+    }
+    .customer .user__comment .user .user__name{
+        width: 30%;
+    }
+    .comment__btn{
+        border: 1px solid #666666;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-size: 14px;
+        color: #666666;
+        margin-top: 1rem;
+        padding: 6px 25px;
+        cursor: pointer;
+        transition: 0.3s linear;
+    }
+    .comment__btn:hover{
+        color: #000;
+        background: #f6f6f6;
+    }
+    .c__box:last-child{
+        filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.15));
+        background: rgba(0, 82, 255, 0.2);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 450px;
+        padding: 1rem 2rem;
+        width: 30%;
+        margin-left: 4rem;
+    }
+    .c__box:last-child .box__title{
+        color: #023047;
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .c__box:last-child input{
+        padding: 10px;
+        border-radius: 8px;
+        outline: none;
+    }
+    .c__box:last-child textarea{
+        padding: 10px 10px 3rem 10px;
+        outline: none;
+        border-radius: 8px;
+    }
+    .c__box:last-child button{
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #377AF9 86.59%, #2267C7 99.79%);
+        border-radius: 8px;
+        color: #FFF;
+        padding: 15px 30px;
+        margin: 0 auto;
+    }
+    .c__box:last-child button:hover{
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #2267C7 86.59%, #377AF9 99.79%);
+    }
+    .radioContainer {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    .radioContainer input {
+        display: none;
+    }
+    .radioContainer .circle {
+        display: inline-block;
+        width: 58px;
+        height: 48px;
+        background-color: white;
+        border: 1px solid rgb(218, 218, 218);
+        border-radius: 4px;
+        text-align: center;
+        padding-top: 8.5px;
+    }
+    .radioContainer:hover .circle {
+        border: 1px solid black;
+    }
+    .radioContainer input:checked + .circle {
+        background-color: black;
+        color: white;
+        border: 1px solid rgb(12, 11, 11);
+    }
 </style>
+

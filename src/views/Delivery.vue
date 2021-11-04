@@ -86,14 +86,14 @@ export default {
         cursor: pointer;
     }
     .delivery-menu ul li:hover{
-        color: #C211A7;
+        color: #0052FF;
     }
     .delivery-menu ul li:nth-child(3){
-        color: #C211A7;
+        color: #0052FF;
     }
     .delivery .delivery__title{
         font-size: 42px;
-        color: #005964;
+        color: #023047;
         margin-bottom: 2rem;
     }
     .delivery-boxes{

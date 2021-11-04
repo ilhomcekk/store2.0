@@ -31,22 +31,25 @@ export default {
         background: #EDE9E9;
         color: #000;
         cursor: pointer;
-        font-size: 24px;
+        font-size: 28px !important;
+        font-weight: bold !important;
         padding: 0 10px;
-        border-radius: 5px 0px 0px 5px;
+        border-radius: 0 !important;
     }
     .product__order .product__decrement{
-        background: linear-gradient(92.98deg, rgba(190, 217, 255, 0) 0.15%, #729EDB 0.15%, #274784 100.17%);
+        background: linear-gradient(92.98deg, rgba(190, 217, 255, 0) 0.15%, #729EDB 0.15%, #274784 100.17%) !important;
         color: #FFF;
         cursor: pointer;
-        font-size: 24px;
+        font-size: 28px !important;
+        font-weight: bold !important;
         padding: 0 10px;
-        border-radius: 0 5px 5px 0;
+        border-radius: 0 !important;
     }
     .product__order p{
         width: 70px;
-        padding: 5px 10px;
+        padding: 8px 10px;
         outline: none;
+        text-align: center;
         border: 1px solid #C4C4C4;
     }
 </style>

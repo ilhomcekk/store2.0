@@ -60,7 +60,7 @@ export default {
     }
     .basket__box h4 {
         font-size: 18px;
-        line-height: 100%;
+        line-height: 1;
         font-weight: bold;
         text-transform: uppercase;
         color: #000000;
@@ -68,7 +68,7 @@ export default {
     .basket__box h5 {
         font-weight: normal;
         font-size: 16px;
-        line-height: 100%;
+        line-height: 1;
         color: #023047;
     }
     .basket__gray {

@@ -20,7 +20,7 @@
     }
     .add-product .container:nth-child(2) h1{
         font-size: 48px;
-        color: #005964;
+        color: #023047;
     }
     .add-product .product-action{
         display: flex;
@@ -63,14 +63,16 @@
         justify-content: space-between;
     }
     .add-product .product__information .product__about .product__price{
-        color: #C211A7;
+        color: #0052FF;
         font-size: 32px;
+        font-weight: 700;
         display: flex;
     }
     .add-product .product__information .product__about .product__price span{
         text-decoration: line-through;
         color: #444444;
         margin-left: 10px;
+        padding-top: 12px;
     }
     .add-product .product__information .product__about .product__order{
         display: flex;
@@ -94,7 +96,7 @@
         border: 1px solid #C4C4C4;
     }
     .add-product .product__information .product__about .product__order .product__decrement{
-        background: #C211A7;
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #377AF9 86.59%, #2267C7 99.79%);
         color: #FFF;
         cursor: pointer;
         font-size: 24px;
@@ -166,7 +168,7 @@
         justify-content: space-between;
     }
     .add-product .product__information .product__buttons #korzina__button{
-        background: linear-gradient(90deg, #C311A7 3.86%, #A91BA5 100.16%);
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #377AF9 86.59%, #2267C7 99.79%);
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
         border-radius: 5px;
         color: #FFF;
@@ -181,7 +183,7 @@
     .add-product .product__information .product__buttons div i{
         margin-left: 2.5rem;
         cursor: pointer;
-        color: #C211A7;
+        color: #FF1B1B;
     }
     .add-product .recommended{
         padding: 3rem 0 0 0;
@@ -192,7 +194,7 @@
     }
     .add-product .recommended .r__box .box__title{
         font-size: 42px;
-        color: #005964;
+        color: ддд жжзщдщшл#023047;
         margin-bottom: 0.8rem;
     }
     .add-product .recommended .r__box span{
@@ -222,7 +224,7 @@
     }
     .add-product .advertising__title{
         font-size: 42px;
-        color: #005964;
+        color: #023047;
         margin-bottom: 2rem;
     }
     .advertising{
@@ -242,7 +244,7 @@
         justify-content: center;
     }
     .advertising__button .show__button{
-        background: linear-gradient(281.2deg, #15626B 8.26%, #1B7F8C 94.42%);;
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #377AF9 86.59%, #2267C7 99.79%);
         border-radius: 8px;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
         color: #FFF;
@@ -357,7 +359,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        background: #C211A7;
+        background: #0052FF;
         border-radius: 16px;
         box-shadow: 0px 0px 2px rgba(145, 158, 171, 0.24), 0px 16px 32px -4px rgba(145, 158, 171, 0.24);
         color: #FFF;

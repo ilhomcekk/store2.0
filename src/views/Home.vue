@@ -85,4 +85,68 @@ export default {
         color: #FFFFFF;
         padding: 12px 80px;
     }
+
+    @media (min-width: 769px) and (max-width: 1025px){
+        .grid-cols-5 {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 769px){
+        .grid-cols-5 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .grid-cols-4 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (min-width: 376px) and (max-width: 600px){
+        .px-12{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .grid-cols-5 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .brand__name{
+            font-size: 32px;
+        }
+        .banner .grid-cols-4{
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        }
+        .banner img.h-64{
+            height: auto;
+        }
+    }
+
+    @media (max-width: 376px){
+        .px-12{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .grid-cols-5 {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        .brand__name{
+            font-size: 28px;
+            line-height: 28px;
+        }
+        .banner .grid-cols-4{
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        }
+        .banner img.h-64{
+            height: auto;
+        }
+        .banner .gap-4{
+            gap: 5px;
+        }
+    }
+
+    @media (max-width: 300px){
+        .show__all{
+            padding: 12px 55px;
+        }
+    }
+
 </style>

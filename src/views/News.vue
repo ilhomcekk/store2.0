@@ -113,14 +113,18 @@ export default {
 
 <style scoped>
     .pages{
-        padding: 2.5rem 1.25rem !important;
+        padding: 2.5rem 3rem !important;
     }
-    .pages span{
+    .pages a{
         color: #023047 !important;
+        cursor: pointer;
+    }
+    .pages a:hover{
+        color: #023999 !important;
     }
     .news__title{
         font-size: 42px;
-        color: #005964;
+        color: #023047;
         margin-bottom: 2rem;
     }
     .news__boxes{
@@ -130,7 +134,7 @@ export default {
     }
     .news__boxes .box{
         width: 31%;
-        margin: 17px;
+        margin: 16px;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
     }
     .news__boxes .box img{
@@ -161,7 +165,7 @@ export default {
         justify-content: space-between;
     }
     .news__boxes .box .box__text .n__date a{
-        background: linear-gradient(281.2deg, #15626B 8.26%, #1B7F8C 94.42%);;
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #377AF9 86.59%, #2267C7 99.79%);
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
         border-radius: 5px;
         padding: 10px 15px;
@@ -169,14 +173,14 @@ export default {
     }
     .news__boxes .box .box__text .n__date a:hover{
         box-shadow: unset !important;
-        background: #15626B;
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #2267C7 86.59%, #377AF9 99.79%);
     }
     .news__boxes .box .box__text .n__date span{
-        color: #005964;
+        color: #999999;
     }
     .n-video-title{
         font-size: 42px;
-        color: #005964;
+        color: #023047;
         margin-bottom: 2rem;
     }
     .n-video{
@@ -227,14 +231,14 @@ export default {
         width: 95%;
     }
     .n-video .video__box a{
-        background: linear-gradient(281.2deg, #15626B 8.26%, #1B7F8C 94.42%);;
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #377AF9 86.59%, #2267C7 99.79%) !important;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
         border-radius: 5px;
         padding: 10px 15px;
         color: #FCF6F6;
     }
     .n-video .video__box a:hover{
-        background: #15626B !important;
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #2267C7 86.59%, #377AF9 99.79%) !important;
         box-shadow: unset !important;
     }
     .n-video .video__boxes .box{
@@ -282,7 +286,7 @@ export default {
         justify-content: space-between;
     }
     .n-video .video__boxes .box .box__text .n__date a{
-        background: linear-gradient(281.2deg, #15626B 8.26%, #1B7F8C 94.42%);;
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #377AF9 86.59%, #2267C7 99.79%) !important;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
         border-radius: 5px;
         padding: 10px 15px;
@@ -290,10 +294,10 @@ export default {
     }
     .n-video .video__boxes .box .box__text .n__date a:hover{
         box-shadow: unset !important;
-        background: #15626B !important;
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #2267C7 86.59%, #377AF9 99.79%) !important;
     }
     .n-video .video__boxes .box .box__text .n__date span{
-        color: #005964;
+        color: #999999;
     }
 
     @media (max-width: 1025px){

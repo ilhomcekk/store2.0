@@ -19,7 +19,7 @@
             <div class="grid grid-cols-7 gap-4 mt-3 pb-5">
                 <div class="col-span-2 flex navbar__category">
                     <div class="navbar__logo">
-                        <a href="#">LOGO</a>
+                        <a href="/">LOGO</a>
                     </div>
                     <div class="category__button ml-12">
                         <button class="flex items-center">

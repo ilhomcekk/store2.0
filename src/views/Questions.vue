@@ -84,14 +84,19 @@ export default {
 
 <style scoped>
     .pages{
-        padding: 2.5rem 1.25rem;
+        padding: 2.5rem 3rem;
     }
-    .pages span{
+    .pages a{
         color: #023047;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .pages a:hover{
+        color: #023999;
     }
     .questions__title{
         font-size: 42px;
-        color: #005964;
+        color: #023047;
         margin-bottom: 2rem;
     }
     .questions__box{
@@ -115,7 +120,7 @@ export default {
         padding-left: 1rem;
     }
     .questions__box .box .questions__text .text2:hover{
-        color: #15626B;
+        color: #023999;
     }
     .questions__box .box .questions__text .text2 i{
         height: 50px;
@@ -123,7 +128,7 @@ export default {
         border-radius: 50%;
         margin-right: 1.5rem;
         color: #FFF;
-        background: linear-gradient(281.2deg, #15626B 8.26%, #1B7F8C 94.42%);
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #384F81 -2.67%, #49679F 56.03%, #729EDB 99.79%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -139,7 +144,7 @@ export default {
         border-radius: 10px;
         padding: 1.5rem 1.5rem 0 1.5rem;
         margin-top: 1.5rem;
-        width: 80%;
+        width: 85%;
     }
     .questions__box .box .questions__text .text__box p{
         color: #666666;
@@ -147,7 +152,8 @@ export default {
         font-size: 17px;
     }
     .c__box{
-        background: #FFECF5;
+        filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.15));
+        background: rgba(0, 82, 255, 0.2);
         border-radius: 10px;
         display: flex;
         flex-direction: column;
@@ -173,14 +179,14 @@ export default {
         border-radius: 8px;
     }
     .c__box button{
-        background: linear-gradient(90deg, #C311A7 3.86%, #A91BA5 100.16%);
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #377AF9 86.59%, #2267C7 99.79%);
         border-radius: 8px;
         color: #FFF;
         padding: 15px 30px;
         margin: 0 auto;
     }
     .c__box button:hover{
-        background: #A91BA5 !important;
+        background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #2267C7 86.59%, #377AF9 99.79%);
     }
 
     @media only screen and (min-width: 769px) and (max-width: 1025px){

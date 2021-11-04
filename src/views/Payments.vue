@@ -93,21 +93,25 @@ export default {
 
 <style scoped>
     .pages{
-        padding: 0 1.25rem 2.5rem 1.25rem;
+      padding: 0rem 4rem 1rem 4rem;
     }
-    .pages span{
+    .pages a{
         color: #023047;
+        text-decoration: none;
+    }
+    .pages a:hover{
+      color: #023999;
     }
     .payment__title{
         font-size: 42px;
-        color: #005964;
+        color: #023047;
         margin-bottom: 2rem;
     }
     table{
         border-radius: 8px;
     }
     table tr th{
-        background: #FFECF5;
+        background: rgba(0, 82, 255, 0.15);
         color: #023047;
         font-size: 20px;
         padding: 1.5rem 0;
@@ -118,5 +122,42 @@ export default {
     }
     table tr th:last-child{
         border-radius: 0px 8px 0px 0px;
+    }
+
+    @media (min-width: 415px) and (max-width: 600px){
+      .px-12{
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      table tr th{
+        font-size: 17px;
+        line-height: 18px;
+      }
+    }
+
+    @media only screen and (max-width: 415px){
+        .pages{
+            padding: 1rem 1.25rem !important;
+        }
+        .payment__title{
+            font-size: 32px;
+            margin-bottom: 1rem;
+        }
+        .px-12{
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        table tr th{
+          font-size: 14px;
+          line-height: 16px;
+          padding: 1rem 0;
+        }
+    }
+
+    @media (max-width: 300px){
+      table tr th{
+        font-size: 12px;
+        padding: 0.8rem 0;
+      }
     }
 </style>
