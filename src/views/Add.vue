@@ -48,7 +48,7 @@
                         </div>
                         <div class="payment">
                             Цена при оплате:
-                            <img src="../assets/image/image 29.png" alt="not found">
+                            <a href="#"><img src="../assets/image/image 29.png" alt="not found"></a>
                         </div>
                         <div class="delivery">Доставка: 27-29 сентября</div>
                         <div class="sales">Продавец: <span>ВАЙЛДБЕРРИЗ ООО</span></div>
@@ -358,6 +358,9 @@ export default {
     .product-list .product__img .image{
         height: 458px !important;
         position: relative;
+    }
+    .product-list .product__img .image img{
+        height: 100%;
     }
     .product-list .product__img .image .far.fa-heart{
         position: absolute;

@@ -105,6 +105,9 @@ export default {
         line-height: 100%;
         color: #000000;
     }
+    .vm--modal{
+        left: -60px;
+    }
     .delivery__pick {
         background: linear-gradient(92.64deg, #B9D5FD -2.68%, #08235C -2.67%, #377AF9 86.59%, #2267C7 99.79%);
         border-radius: 8px;
@@ -114,4 +117,5 @@ export default {
         color: #FFFFFF;
         padding: 15px 25px;
     }
+
 </style>

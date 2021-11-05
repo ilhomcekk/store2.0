@@ -16,15 +16,15 @@
         </div>
         <div class="container mx-auto px-12 mt-12 banner">
             <div class="grid grid-cols-4 gap-4">
-                <div class="col-span-2">
+                <a href="#" class="col-span-2">
                     <img class="w-full h-64" src="../assets/image/image 25.png" alt="">
-                </div>
-                <div class="col-span-1">
+                </a>
+                <a href="#" class="col-span-1">
                     <img class="w-full h-64" src="../assets/image/image 26.png" alt="">
-                </div>
-                <div class="col-span-1">
+                </a>
+                <a href="#" class="col-span-1">
                     <img class="w-full h-64" src="../assets/image/image 27.png" alt="">
-                </div>
+                </a>
             </div>
         </div>
         <div class="container mx-auto mt-12 px-12">
